@@ -1,0 +1,1209 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/home/suzixun/.local/lib/python3.8/site-packages/gymnasium/envs/registration.py:485: UserWarning: [33mWARN: The environment creator metadata doesn't include `render_modes`, contains: ['render.modes', 'reward_type'][0m
+  logger.warn(
+max episode length is 300
+step size is [0.001      0.001      0.001      0.03490658 0.03490658 0.03490658
+ 0.05      ]
+Set random seed
+reward type is sparse
+Translation threshold: 0.5, angle threshold: 0.1745329201221466
+Found Common Object Namespace as:  /ambf/env/
+psm1_target_ik NAMED OBJECT NOT FOUND
+psm1_palm_joint_ik NAMED OBJECT NOT FOUND
+psm1_target_fk NAMED OBJECT NOT FOUND
+psm2_target_ik NAMED OBJECT NOT FOUND
+psm2_palm_joint_ik NAMED OBJECT NOT FOUND
+psm2_target_fk NAMED OBJECT NOT FOUND
+Initialized!!!
+Loading model (BC): /home/suzixun/SurgicAI/RL/insert_residual/BC/sparse/seed_0/checkpoints/bc_25000_steps.zip  exists=True
+Loading model (TD3_HER_BC): /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip  exists=True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+========== Estimated-Direction CEM v2 ==========
+residual       : BC  scale=1.0
+bias_mode      : scalar   flip_step: 0
+conditions     : ['-2.5', '-2', '-1.5', '-1', '-0.5', '0', '0.5', '1', '1.5', '2', '2.5']
+methods        : ['residual_only']
+fixed warmup   : 20   seq z=3.0 min_n=10 max_wait=40   window=10
+est_noise_deg  : 0.0
+================================================
+
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=    -2.5 | residual_only | success=  0.00% | steps=300.00
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=      -2 | residual_only | success=  0.00% | steps=300.00
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+bias=    -1.5 | residual_only | success=  4.00% | steps=291.04
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+bias=      -1 | residual_only | success= 32.00% | steps=261.40
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=    -0.5 | residual_only | success= 36.00% | steps=256.74
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=       0 | residual_only | success=  4.00% | steps=296.88
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=     0.5 | residual_only | success= 10.00% | steps=286.16
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+bias=       1 | residual_only | success= 24.00% | steps=258.22
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=     1.5 | residual_only | success=  0.00% | steps=300.00
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=       2 | residual_only | success=  4.00% | steps=292.28
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=     2.5 | residual_only | success=  2.00% | steps=298.88
+/home/suzixun/SurgicAI/RL/RL_algo/DemoHerReplayBuffer.py:38: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  observations[key] = th.tensor(observations[key], dtype=th.float32, device=self.device)
+
+Elapsed: 61.4 min
+
+========== Summary (success %) ==========
+    bias | residual_only
+    -2.5 |           0.0
+      -2 |           0.0
+    -1.5 |           4.0
+      -1 |          32.0
+    -0.5 |          36.0
+       0 |           4.0
+     0.5 |          10.0
+       1 |          24.0
+     1.5 |           0.0
+       2 |           4.0
+     2.5 |           2.0
+
+Saved to: /home/suzixun/SurgicAI/RL/evolution_results/estimated_direction/v2/exp4_bc_scale1.0.json
+Exception in thread Thread-75:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "<string>", line 321, in _run_obj_publishers
+RuntimeError: dictionary changed size during iteration
+Closing publisher for:  /ambf/env/Plane
+Closing publisher for:  /ambf/env/lights/light2
+Closing publisher for:  /ambf/env/cameras/cameraL
+Closing publisher for:  /ambf/env/cameras/cameraR
+Closing publisher for:  /ambf/env/cameras/cameraL2
+Closing publisher for:  World
+Closing publisher for:  /ambf/env/psm1/baselink
+Closing publisher for:  /ambf/env/psm1/toolyawlink
+Closing publisher for:  /ambf/env/psm1/Sensor0
+Closing publisher for:  /ambf/env/psm1/Actuator0
+Closing publisher for:  /ambf/env/psm2/baselink
+Closing publisher for:  /ambf/env/psm2/toolyawlink
+Closing publisher for:  /ambf/env/psm2/Sensor0
+Closing publisher for:  /ambf/env/psm2/Actuator0
+Closing publisher for:  /ambf/env/BlackGround
+Closing publisher for:  /ambf/env/CameraFrame
+Closing publisher for:  /ambf/env/Ledge
+Closing publisher for:  /ambf/env/Needle
+Closing publisher for:  /ambf/env/Phantom
+Closing publisher for:  /ambf/env/Barrier
+Closing publisher for:  /ambf/env/Entry1
+Closing publisher for:  /ambf/env/Entry2
+Closing publisher for:  /ambf/env/Entry3
+Closing publisher for:  /ambf/env/Entry4
+Closing publisher for:  /ambf/env/Exit1
+Closing publisher for:  /ambf/env/Exit2
+Closing publisher for:  /ambf/env/Exit3
+Closing publisher for:  /ambf/env/Exit4
+Closing publisher for:  /ambf/env/psm/ghostEntry1
+Closing publisher for:  /ambf/env/psm/ghostExit1
+Closing publisher for:  /ambf/env/psm/ghostEntry2
+Closing publisher for:  /ambf/env/psm/ghostExit2
+Closing publisher for:  /ambf/env/psm/ghostEntry3
+Closing publisher for:  /ambf/env/psm/ghostExit3
+Closing publisher for:  /ambf/env/psm/ghostEntry4
+Closing publisher for:  /ambf/env/psm/ghostExit4

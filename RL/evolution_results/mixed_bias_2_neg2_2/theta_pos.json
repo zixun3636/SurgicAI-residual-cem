@@ -1,0 +1,56 @@
+{
+  "method": "mixed_axis_bias_evaluation",
+  "angle_bias_vec_deg": [
+    2.0,
+    -2.0,
+    2.0
+  ],
+  "bias_in_action_space": [
+    1.0,
+    -1.0,
+    1.0
+  ],
+  "theta": [
+    0.9403843283653259,
+    0.979397714138031,
+    1.1095186471939087,
+    -0.48590049147605896,
+    -0.24643699824810028,
+    -0.9295461177825928
+  ],
+  "scale_vec": [
+    1.0,
+    1.0,
+    1.0,
+    0.9403843283653259,
+    0.979397714138031,
+    1.1095186471939087,
+    0.0
+  ],
+  "calibration_bias_vec": [
+    0.0,
+    0.0,
+    0.0,
+    -0.48590049147605896,
+    -0.24643699824810028,
+    -0.9295461177825928,
+    0.0
+  ],
+  "residual_scale": 1.0,
+  "eval_seed": 100,
+  "episodes": 100,
+  "success_count": 50,
+  "success_rate": 0.5,
+  "mean_steps_all": 187.31,
+  "mean_steps_success": 74.62,
+  "mean_traj_all_mm": 54.84454288043347,
+  "mean_traj_success_mm": 50.155760898659935,
+  "mean_return": -186.81,
+  "rot_saturation_percent": {
+    "roll": 20.30857936041856,
+    "pitch": 45.51278629010731,
+    "yaw": 32.384816614169026
+  },
+  "model_path": "/home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_0/final_model.zip",
+  "base_insert_model_path": "/home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip"
+}

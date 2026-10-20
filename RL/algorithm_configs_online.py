@@ -12,9 +12,9 @@ import numpy as np
 import os
 
 # Constants
-DEFAULT_NET_ARCH = dict(pi=[256, 256, 256], qf=[256, 256, 256])
-DEFAULT_BATCH_SIZE = 256
-DEFAULT_LEARNING_RATE = 2e-4
+DEFAULT_NET_ARCH = dict(pi=[256, 256, 256, 256], qf=[256, 256, 256, 256])
+DEFAULT_BATCH_SIZE = 512
+DEFAULT_LEARNING_RATE = 3e-4
 
 def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_type: str, seed: int, episode_transitions: Any = None, evaluation_mode: bool = False) -> Dict[str, Any]:
     """
@@ -34,14 +34,14 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
     base_params = {
         "policy": "MultiInputPolicy",
         "env": env,
-        "learning_rate": DEFAULT_LEARNING_RATE,
-        "gamma": 0.995,
-        "batch_size": DEFAULT_BATCH_SIZE,
+        "learning_rate": 3e-4,
+        "gamma": 0.99,
+        "batch_size": 512,
         "verbose": 1,
         "seed": seed,
     }
 
-    action_noise = NormalActionNoise(mean=np.zeros(env.action_space.shape[-1]), sigma=5e-2 * np.ones(env.action_space.shape[-1]))
+    action_noise = NormalActionNoise(mean=np.zeros(env.action_space.shape[-1]), sigma=0.1 * np.ones(env.action_space.shape[-1]))
 
     configs = {
         "PPO": {
@@ -59,18 +59,19 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
                 "tau": 0.005,
                 "action_noise": action_noise,
                 "replay_buffer_class": DemoHerReplayBuffer,
-                "train_freq": (2, "episode"),
+                "train_freq": (1, "episode"),
                 "policy_kwargs": dict(net_arch=DEFAULT_NET_ARCH),
                 "replay_buffer_kwargs": dict(
                     demo_transitions=episode_transitions,
-                    demo_sample_ratio=0.3,
+                    demo_sample_ratio=0.2,
                     n_sampled_goal=4,
                     goal_selection_strategy="future",
                 ),
                 "tensorboard_log": f"{base_path}/tensorboard",
                 "episode_transitions": episode_transitions,
-                "BC_coeff": 0.6,
-                "demo_ratio": 0.3,
+                "BC_coeff": 0.4,
+                "Q_filter": False,
+                "demo_ratio": 0.5,
             }
         },
         "DDPG_HER": {
@@ -79,7 +80,7 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
                 **base_params,
                 "tau": 0.005,
                 "replay_buffer_class": HerReplayBuffer,
-                "train_freq": (2, "episode"),
+                "train_freq": (1, "episode"),
                 "policy_kwargs": dict(net_arch=DEFAULT_NET_ARCH),
                 "replay_buffer_kwargs": dict(
                     n_sampled_goal=4,
@@ -93,8 +94,8 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
             "params": {
                 "policy": "MultiInputPolicy",
                 "env": env,
-                "learning_rate": DEFAULT_LEARNING_RATE,
-                "batch_size": DEFAULT_BATCH_SIZE,
+                "learning_rate": 3e-4,
+                "batch_size": 512,
                 "verbose": 1,
                 "seed": seed,
                 "policy_kwargs": dict(net_arch=DEFAULT_NET_ARCH),
@@ -108,7 +109,7 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
                 **base_params,
                 "action_noise": action_noise,
                 "tau": 0.005,
-                "train_freq": (2, "episode"),
+                "train_freq": (1, "episode"),
                 "tensorboard_log": f"{base_path}/tensorboard",
             }
         },
@@ -117,7 +118,7 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
             "params": {
                 **base_params,
                 "tau": 0.005,
-                "train_freq": (2, "episode"),
+                "train_freq": (1, "episode"),
                 "policy_kwargs": dict(net_arch=DEFAULT_NET_ARCH),
                 "tensorboard_log": f"{base_path}/tensorboard",
             }
@@ -128,7 +129,7 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
                 **base_params,
                 "tau": 0.005,
                 "action_noise": action_noise,
-                "train_freq": (2, "episode"),
+                "train_freq": (1, "episode"),
                 "policy_kwargs": dict(net_arch=DEFAULT_NET_ARCH),
                 "tensorboard_log": f"{base_path}/tensorboard",
             }
@@ -139,7 +140,7 @@ def get_algorithm_config(algorithm_name: str, env: Any, task_name: str, reward_t
                 **base_params,
                 "tau": 0.005,
                 "replay_buffer_class": HerReplayBuffer,
-                "train_freq": (2, "episode"),
+                "train_freq": (1, "episode"),
                 "policy_kwargs": dict(net_arch=DEFAULT_NET_ARCH),
                 "replay_buffer_kwargs": dict(
                     n_sampled_goal=4,

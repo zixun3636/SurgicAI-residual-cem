@@ -1,0 +1,67 @@
+{
+  "method": "direction_conditioned_cem",
+  "rule": "bias < 0 uses theta_neg; bias >= 0 uses theta_pos",
+  "bias_values": [
+    -2.5
+  ],
+  "episodes_per_bias": 100,
+  "eval_seed": 4,
+  "mean_success_rate": 0.81,
+  "min_success_rate": 0.81,
+  "mean_steps": 109.52,
+  "mean_traj_mm": 84.17202151246653,
+  "mean_return": -108.71,
+  "theta_pos": [
+    0.9403843283653259,
+    0.9793976545333862,
+    1.1095186471939087,
+    -0.48590052127838135,
+    -0.24643701314926147,
+    -0.9295461177825928
+  ],
+  "theta_neg": [
+    1.0204708576202393,
+    0.6958232522010803,
+    1.1939868927001953,
+    0.25085097551345825,
+    0.4556313157081604,
+    0.47102418541908264
+  ],
+  "positive_params_path": "/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json",
+  "negative_params_path": "/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json",
+  "per_bias_results": {
+    "-2.5": {
+      "theta_used": "theta_neg",
+      "success_rate": 0.81,
+      "mean_steps": 109.52,
+      "mean_traj_mm": 84.17202151246653,
+      "mean_return": -108.71,
+      "theta": [
+        1.0204708576202393,
+        0.6958232522010803,
+        1.1939868927001953,
+        0.25085097551345825,
+        0.4556313157081604,
+        0.47102418541908264
+      ],
+      "scale_vec": [
+        1.0,
+        1.0,
+        1.0,
+        1.0204708576202393,
+        0.6958232522010803,
+        1.1939868927001953,
+        0.0
+      ],
+      "bias_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.25085097551345825,
+        0.4556313157081604,
+        0.47102418541908264,
+        0.0
+      ]
+    }
+  }
+}

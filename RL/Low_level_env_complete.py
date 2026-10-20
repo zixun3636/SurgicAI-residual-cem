@@ -293,7 +293,7 @@ class SRC_low_level(gym.Env):
             self.exit_obs = self.insert_goal_evaluator(110,[0.001,0,0])
             self.goal_obs = self.exit_obs
         elif self.task == 4 and self.task_step == 1:
-            self.needle_obs = self.needle_goal_evaluator(lift_height=0.007, psm_idx=1,deg_angle=105)
+            self.needle_obs = self.needle_goal_evaluator(lift_height=0.007, psm_idx=1,deg_angle=80)
             self.goal_obs = self.needle_obs
         elif self.task == 5 and self.task_step == 1:
             self.pullout_obs = self.pullout_goal_evaluator()
@@ -374,9 +374,9 @@ class SRC_low_level(gym.Env):
         origin_rz = 0.0
 
 
-        random_x = np.random.uniform(-0.004, 0.005)
-        random_y = np.random.uniform(-0.04, 0.02)
-        random_rz = np.random.uniform(-np.pi/4,np.pi/4)
+        random_x = 0.0   # fixed x for stable Insert training
+        random_y = 0.0   # fixed y for stable Insert training
+        random_rz = 0.0   # fixed needle rotation for stable Insert training
 
         origin_p[0] += random_x
         origin_p[1] += random_y

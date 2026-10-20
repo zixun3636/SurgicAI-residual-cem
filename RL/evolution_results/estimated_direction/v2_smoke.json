@@ -1,0 +1,1021 @@
+{
+ "method": "estimated_direction_cem_v2",
+ "config": {
+  "algorithm": "TD3_HER_BC",
+  "task_name": "Insert",
+  "reward_type": "sparse",
+  "trans_error": 0.5,
+  "angle_error": 10.0,
+  "eval_seed": 0,
+  "episodes": 2,
+  "bias_mode": "scalar",
+  "bias_list": "-2,2",
+  "random3d_low": -2.0,
+  "random3d_high": 2.0,
+  "flip_step": 20,
+  "methods": "oracle,est_seq_pitch,adaptive",
+  "warmup_steps": 20,
+  "z_thresh": 3.0,
+  "min_samples": 10,
+  "max_wait": 40,
+  "se_floor": 0.001,
+  "window": 10,
+  "adaptive_axes": "0,1,2",
+  "sat_margin": 0.98,
+  "est_noise_deg": 0.0,
+  "action_noise_std": 0.0,
+  "model_path": "/home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip",
+  "base_insert_model_path": "/home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip",
+  "base_insert_algo": "TD3_HER_BC",
+  "residual_scale": 1.0,
+  "postprocess_mode": "rot_scale_bias",
+  "positive_params_path": "/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json",
+  "negative_params_path": "/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json",
+  "scale_min": 0.0,
+  "scale_max": 2.0,
+  "bias_bound": 1.0,
+  "save_json": "/home/suzixun/SurgicAI/RL/evolution_results/estimated_direction/v2_smoke.json",
+  "save_episodes": 1,
+  "angle_bias_deg": 0.0
+ },
+ "theta_pos": [
+  0.9403843283653259,
+  0.9793976545333862,
+  1.1095186471939087,
+  -0.48590052127838135,
+  -0.24643701314926147,
+  -0.9295461177825928
+ ],
+ "theta_neg": [
+  1.0204708576202393,
+  0.6958232522010803,
+  1.1939868927001953,
+  0.25085097551345825,
+  0.4556313157081604,
+  0.47102418541908264
+ ],
+ "results": {
+  "-2": {
+   "oracle": {
+    "summary": {
+     "episodes": 2,
+     "success_rate": 1.0,
+     "mean_steps": 60.0,
+     "mean_traj_mm": 65.20685942843556,
+     "mean_return": -59.0,
+     "sat_pos": [
+      0.7666666666666667,
+      0.075,
+      0.0
+     ],
+     "sat_neg": [
+      0.05,
+      0.19166666666666665,
+      1.0
+     ],
+     "pre_sat_pos": [
+      0.75,
+      0.10833333333333334,
+      0.0
+     ],
+     "pre_sat_neg": [
+      0.10833333333333334,
+      0.3,
+      0.8166666666666667
+     ],
+     "final_theta_accuracy": 1.0,
+     "mean_theta_changes": 1.0,
+     "flipped_episodes": 2,
+     "switched_rate": 1.0,
+     "mean_switch_latency": 0.0,
+     "success_rate_flipped": 1.0
+    },
+    "episodes": [
+     {
+      "seed": 0,
+      "bias_deg": [
+       -2.0,
+       -2.0,
+       -2.0
+      ],
+      "success": true,
+      "steps": 60,
+      "traj_mm": 65.24711538106203,
+      "return": -59.0,
+      "final_theta": "theta_pos",
+      "theta_changes": [
+       [
+        0,
+        "theta_neg"
+       ],
+       [
+        20,
+        "theta_pos"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": -1.0,
+      "final_true_dir": 1.0,
+      "final_theta_correct": true,
+      "switch_latency": 0,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.7666666666666667,
+       0.06666666666666667,
+       0.0
+      ],
+      "sat_neg": [
+       0.05,
+       0.16666666666666666,
+       1.0
+      ],
+      "pre_sat_pos": [
+       0.75,
+       0.1,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.11666666666666667,
+       0.3,
+       0.8333333333333334
+      ]
+     },
+     {
+      "seed": 1,
+      "bias_deg": [
+       -2.0,
+       -2.0,
+       -2.0
+      ],
+      "success": true,
+      "steps": 60,
+      "traj_mm": 65.1666034758091,
+      "return": -59.0,
+      "final_theta": "theta_pos",
+      "theta_changes": [
+       [
+        0,
+        "theta_neg"
+       ],
+       [
+        20,
+        "theta_pos"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": -1.0,
+      "final_true_dir": 1.0,
+      "final_theta_correct": true,
+      "switch_latency": 0,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.7666666666666667,
+       0.08333333333333333,
+       0.0
+      ],
+      "sat_neg": [
+       0.05,
+       0.21666666666666667,
+       1.0
+      ],
+      "pre_sat_pos": [
+       0.75,
+       0.11666666666666667,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.1,
+       0.3,
+       0.8
+      ]
+     }
+    ]
+   },
+   "est_seq_pitch": {
+    "summary": {
+     "episodes": 2,
+     "success_rate": 1.0,
+     "mean_steps": 82.0,
+     "mean_traj_mm": 73.91104717180133,
+     "mean_return": -81.0,
+     "sat_pos": [
+      0.6594192107222636,
+      0.06783320923306031,
+      0.0
+     ],
+     "sat_neg": [
+      0.0,
+      0.023529411764705882,
+      0.24422933730454208
+     ],
+     "pre_sat_pos": [
+      0.5793745346239761,
+      0.07371556217423678,
+      0.0
+     ],
+     "pre_sat_neg": [
+      0.2858525688756515,
+      0.5436336559940432,
+      0.9873417721518987
+     ],
+     "final_theta_accuracy": 0.0,
+     "mean_theta_changes": 1.0,
+     "flipped_episodes": 2,
+     "switched_rate": 0.0,
+     "mean_switch_latency": null,
+     "success_rate_flipped": 1.0,
+     "decided_rate": 1.0,
+     "direction_accuracy": 1.0,
+     "mean_decision_step": 12.0,
+     "forced_rate": 0.0,
+     "decision_estimate_deg_mean": -1.9999999990607908,
+     "decision_estimate_deg_std": 6.189015744340054e-08,
+     "est_kept_rate": [
+      null,
+      0.9023082650781832,
+      null
+     ]
+    },
+    "episodes": [
+     {
+      "seed": 0,
+      "bias_deg": [
+       -2.0,
+       -2.0,
+       -2.0
+      ],
+      "success": true,
+      "steps": 85,
+      "traj_mm": 78.72518434375525,
+      "return": -84.0,
+      "final_theta": "theta_neg",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        14,
+        "theta_neg"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": -1.0,
+      "final_true_dir": 1.0,
+      "final_theta_correct": false,
+      "switch_latency": null,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.6352941176470588,
+       0.047058823529411764,
+       0.0
+      ],
+      "sat_neg": [
+       0.0,
+       0.047058823529411764,
+       0.23529411764705882
+      ],
+      "pre_sat_pos": [
+       0.5764705882352941,
+       0.058823529411764705,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.3058823529411765,
+       0.5176470588235295,
+       1.0
+      ],
+      "decision_step": 14,
+      "decision_forced": false,
+      "decision_estimate_action": -1.0000000382218412,
+      "decision_estimate_deg": -2.0000000609509483,
+      "chosen_dir": -1.0,
+      "true_dir_at_decision": -1.0,
+      "est_kept_rate": [
+       null,
+       0.9058823529411765,
+       null
+      ]
+     },
+     {
+      "seed": 1,
+      "bias_deg": [
+       -2.0,
+       -2.0,
+       -2.0
+      ],
+      "success": true,
+      "steps": 79,
+      "traj_mm": 69.09690999984741,
+      "return": -78.0,
+      "final_theta": "theta_neg",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        10,
+        "theta_neg"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": -1.0,
+      "final_true_dir": 1.0,
+      "final_theta_correct": false,
+      "switch_latency": null,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.6835443037974683,
+       0.08860759493670886,
+       0.0
+      ],
+      "sat_neg": [
+       0.0,
+       0.0,
+       0.25316455696202533
+      ],
+      "pre_sat_pos": [
+       0.5822784810126582,
+       0.08860759493670886,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.26582278481012656,
+       0.569620253164557,
+       0.9746835443037974
+      ],
+      "decision_step": 10,
+      "decision_forced": false,
+      "decision_estimate_action": -0.9999999763316832,
+      "decision_estimate_deg": -1.9999999371706334,
+      "chosen_dir": -1.0,
+      "true_dir_at_decision": -1.0,
+      "est_kept_rate": [
+       null,
+       0.8987341772151899,
+       null
+      ]
+     }
+    ]
+   },
+   "adaptive": {
+    "summary": {
+     "episodes": 2,
+     "success_rate": 1.0,
+     "mean_steps": 64.0,
+     "mean_traj_mm": 68.37776347436011,
+     "mean_return": -63.0,
+     "sat_pos": [
+      0.6484375,
+      0.078125,
+      0.0
+     ],
+     "sat_neg": [
+      0.0703125,
+      0.15625,
+      0.890625
+     ],
+     "pre_sat_pos": [
+      0.6953125,
+      0.078125,
+      0.0
+     ],
+     "pre_sat_neg": [
+      0.109375,
+      0.3125,
+      0.96875
+     ],
+     "final_theta_accuracy": 1.0,
+     "mean_theta_changes": 2.0,
+     "flipped_episodes": 2,
+     "switched_rate": 1.0,
+     "mean_switch_latency": 7.0,
+     "success_rate_flipped": 1.0,
+     "decided_rate": 1.0,
+     "direction_accuracy": 1.0,
+     "mean_decision_step": 9.0,
+     "forced_rate": 0.0,
+     "decision_estimate_deg_mean": -1.9999998316174805,
+     "decision_estimate_deg_std": 2.2031615554141126e-07,
+     "est_kept_rate": [
+      0.2421875,
+      0.7578125,
+      0.109375
+     ]
+    },
+    "episodes": [
+     {
+      "seed": 0,
+      "bias_deg": [
+       -2.0,
+       -2.0,
+       -2.0
+      ],
+      "success": true,
+      "steps": 64,
+      "traj_mm": 68.29551773145795,
+      "return": -63.0,
+      "final_theta": "theta_pos",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        10,
+        "theta_neg"
+       ],
+       [
+        27,
+        "theta_pos"
+       ]
+      ],
+      "n_theta_changes": 2,
+      "true_dir": -1.0,
+      "final_true_dir": 1.0,
+      "final_theta_correct": true,
+      "switch_latency": 7,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.65625,
+       0.0625,
+       0.0
+      ],
+      "sat_neg": [
+       0.078125,
+       0.140625,
+       0.890625
+      ],
+      "pre_sat_pos": [
+       0.6875,
+       0.078125,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.109375,
+       0.3125,
+       1.0
+      ],
+      "decision_step": 10,
+      "decision_forced": false,
+      "decision_estimate_action": -1.0000000337131851,
+      "decision_estimate_deg": -2.000000051933636,
+      "chosen_dir": -1.0,
+      "true_dir_at_decision": -1.0,
+      "est_kept_rate": [
+       0.21875,
+       0.78125,
+       0.109375
+      ]
+     },
+     {
+      "seed": 1,
+      "bias_deg": [
+       -2.0,
+       -2.0,
+       -2.0
+      ],
+      "success": true,
+      "steps": 64,
+      "traj_mm": 68.46000921726227,
+      "return": -63.0,
+      "final_theta": "theta_pos",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        8,
+        "theta_neg"
+       ],
+       [
+        27,
+        "theta_pos"
+       ]
+      ],
+      "n_theta_changes": 2,
+      "true_dir": -1.0,
+      "final_true_dir": 1.0,
+      "final_theta_correct": true,
+      "switch_latency": 7,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.640625,
+       0.09375,
+       0.0
+      ],
+      "sat_neg": [
+       0.0625,
+       0.171875,
+       0.890625
+      ],
+      "pre_sat_pos": [
+       0.703125,
+       0.078125,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.109375,
+       0.3125,
+       0.9375
+      ],
+      "decision_step": 8,
+      "decision_forced": false,
+      "decision_estimate_action": -0.9999998133970278,
+      "decision_estimate_deg": -1.999999611301325,
+      "chosen_dir": -1.0,
+      "true_dir_at_decision": -1.0,
+      "est_kept_rate": [
+       0.265625,
+       0.734375,
+       0.109375
+      ]
+     }
+    ]
+   }
+  },
+  "2": {
+   "oracle": {
+    "summary": {
+     "episodes": 2,
+     "success_rate": 0.5,
+     "mean_steps": 178.5,
+     "mean_traj_mm": 43.59210150960371,
+     "mean_return": -178.0,
+     "sat_pos": [
+      0.28482456140350876,
+      0.0,
+      0.14666666666666667
+     ],
+     "sat_neg": [
+      0.0,
+      0.10342105263157894,
+      0.5
+     ],
+     "pre_sat_pos": [
+      0.42640350877192984,
+      0.0,
+      0.4816666666666667
+     ],
+     "pre_sat_neg": [
+      0.0,
+      0.18824561403508772,
+      0.41228070175438597
+     ],
+     "final_theta_accuracy": 1.0,
+     "mean_theta_changes": 1.0,
+     "flipped_episodes": 2,
+     "switched_rate": 1.0,
+     "mean_switch_latency": 0.0,
+     "success_rate_flipped": 0.5
+    },
+    "episodes": [
+     {
+      "seed": 1000,
+      "bias_deg": [
+       2.0,
+       2.0,
+       2.0
+      ],
+      "success": false,
+      "steps": 300,
+      "traj_mm": 31.101746884947715,
+      "return": -300.0,
+      "final_theta": "theta_neg",
+      "theta_changes": [
+       [
+        0,
+        "theta_pos"
+       ],
+       [
+        20,
+        "theta_neg"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": 1.0,
+      "final_true_dir": -1.0,
+      "final_theta_correct": true,
+      "switch_latency": 0,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.043333333333333335,
+       0.0,
+       0.29333333333333333
+      ],
+      "sat_neg": [
+       0.0,
+       0.13666666666666666,
+       0.0
+      ],
+      "pre_sat_pos": [
+       0.06333333333333334,
+       0.0,
+       0.9633333333333334
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.11333333333333333,
+       0.0
+      ]
+     },
+     {
+      "seed": 1001,
+      "bias_deg": [
+       2.0,
+       2.0,
+       2.0
+      ],
+      "success": true,
+      "steps": 57,
+      "traj_mm": 56.0824561342597,
+      "return": -56.0,
+      "final_theta": "theta_neg",
+      "theta_changes": [
+       [
+        0,
+        "theta_pos"
+       ],
+       [
+        20,
+        "theta_neg"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": 1.0,
+      "final_true_dir": -1.0,
+      "final_theta_correct": true,
+      "switch_latency": 0,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.5263157894736842,
+       0.0,
+       0.0
+      ],
+      "sat_neg": [
+       0.0,
+       0.07017543859649122,
+       1.0
+      ],
+      "pre_sat_pos": [
+       0.7894736842105263,
+       0.0,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.2631578947368421,
+       0.8245614035087719
+      ]
+     }
+    ]
+   },
+   "est_seq_pitch": {
+    "summary": {
+     "episodes": 2,
+     "success_rate": 0.0,
+     "mean_steps": 300.0,
+     "mean_traj_mm": 75.67064281456987,
+     "mean_return": -300.0,
+     "sat_pos": [
+      0.06666666666666667,
+      0.0,
+      0.0
+     ],
+     "sat_neg": [
+      0.7816666666666667,
+      0.7933333333333333,
+      0.21166666666666667
+     ],
+     "pre_sat_pos": [
+      0.18333333333333335,
+      0.1,
+      0.6216666666666666
+     ],
+     "pre_sat_neg": [
+      0.0,
+      0.06166666666666667,
+      0.22166666666666668
+     ],
+     "final_theta_accuracy": 0.0,
+     "mean_theta_changes": 1.0,
+     "flipped_episodes": 2,
+     "switched_rate": 0.0,
+     "mean_switch_latency": null,
+     "success_rate_flipped": 0.0,
+     "decided_rate": 1.0,
+     "direction_accuracy": 1.0,
+     "mean_decision_step": 10.0,
+     "forced_rate": 0.0,
+     "decision_estimate_deg_mean": 1.9999999822404775,
+     "decision_estimate_deg_std": 5.657222246213678e-09,
+     "est_kept_rate": [
+      null,
+      0.855,
+      null
+     ]
+    },
+    "episodes": [
+     {
+      "seed": 1000,
+      "bias_deg": [
+       2.0,
+       2.0,
+       2.0
+      ],
+      "success": false,
+      "steps": 300,
+      "traj_mm": 85.5720500528696,
+      "return": -300.0,
+      "final_theta": "theta_pos",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        10,
+        "theta_pos"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": 1.0,
+      "final_true_dir": -1.0,
+      "final_theta_correct": false,
+      "switch_latency": null,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.06666666666666667,
+       0.0,
+       0.0
+      ],
+      "sat_neg": [
+       0.7733333333333333,
+       0.8,
+       0.21
+      ],
+      "pre_sat_pos": [
+       0.17333333333333334,
+       0.10333333333333333,
+       0.6566666666666666
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.06,
+       0.22333333333333333
+      ],
+      "decision_step": 10,
+      "decision_forced": false,
+      "decision_estimate_action": 0.9999999960379944,
+      "decision_estimate_deg": 1.9999999765832552,
+      "chosen_dir": 1.0,
+      "true_dir_at_decision": 1.0,
+      "est_kept_rate": [
+       null,
+       0.8466666666666667,
+       null
+      ]
+     },
+     {
+      "seed": 1001,
+      "bias_deg": [
+       2.0,
+       2.0,
+       2.0
+      ],
+      "success": false,
+      "steps": 300,
+      "traj_mm": 65.76923557627015,
+      "return": -300.0,
+      "final_theta": "theta_pos",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        10,
+        "theta_pos"
+       ]
+      ],
+      "n_theta_changes": 1,
+      "true_dir": 1.0,
+      "final_true_dir": -1.0,
+      "final_theta_correct": false,
+      "switch_latency": null,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.06666666666666667,
+       0.0,
+       0.0
+      ],
+      "sat_neg": [
+       0.79,
+       0.7866666666666666,
+       0.21333333333333335
+      ],
+      "pre_sat_pos": [
+       0.19333333333333333,
+       0.09666666666666666,
+       0.5866666666666667
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.06333333333333334,
+       0.22
+      ],
+      "decision_step": 10,
+      "decision_forced": false,
+      "decision_estimate_action": 1.0000000016952166,
+      "decision_estimate_deg": 1.9999999878976997,
+      "chosen_dir": 1.0,
+      "true_dir_at_decision": 1.0,
+      "est_kept_rate": [
+       null,
+       0.8633333333333333,
+       null
+      ]
+     }
+    ]
+   },
+   "adaptive": {
+    "summary": {
+     "episodes": 2,
+     "success_rate": 1.0,
+     "mean_steps": 61.0,
+     "mean_traj_mm": 52.120822336524725,
+     "mean_return": -60.0,
+     "sat_pos": [
+      0.3685483870967742,
+      0.0,
+      0.0
+     ],
+     "sat_neg": [
+      0.0,
+      0.16451612903225807,
+      0.918010752688172
+     ],
+     "pre_sat_pos": [
+      0.8448924731182795,
+      0.07473118279569893,
+      0.0
+     ],
+     "pre_sat_neg": [
+      0.0,
+      0.28655913978494624,
+      0.7685483870967742
+     ],
+     "final_theta_accuracy": 1.0,
+     "mean_theta_changes": 2.0,
+     "flipped_episodes": 2,
+     "switched_rate": 1.0,
+     "mean_switch_latency": 7.5,
+     "success_rate_flipped": 1.0,
+     "decided_rate": 1.0,
+     "direction_accuracy": 1.0,
+     "mean_decision_step": 5.0,
+     "forced_rate": 0.0,
+     "decision_estimate_deg_mean": 2.0000001744452875,
+     "decision_estimate_deg_std": 1.0150386753338125e-08,
+     "est_kept_rate": [
+      0.6067204301075269,
+      0.8354838709677419,
+      0.08198924731182795
+     ]
+    },
+    "episodes": [
+     {
+      "seed": 1000,
+      "bias_deg": [
+       2.0,
+       2.0,
+       2.0
+      ],
+      "success": true,
+      "steps": 62,
+      "traj_mm": 55.870533525943756,
+      "return": -61.0,
+      "final_theta": "theta_neg",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        5,
+        "theta_pos"
+       ],
+       [
+        28,
+        "theta_neg"
+       ]
+      ],
+      "n_theta_changes": 2,
+      "true_dir": 1.0,
+      "final_true_dir": -1.0,
+      "final_theta_correct": true,
+      "switch_latency": 8,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.3870967741935484,
+       0.0,
+       0.0
+      ],
+      "sat_neg": [
+       0.0,
+       0.12903225806451613,
+       0.9193548387096774
+      ],
+      "pre_sat_pos": [
+       0.8064516129032258,
+       0.016129032258064516,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.3064516129032258,
+       0.8870967741935484
+      ],
+      "decision_step": 5,
+      "decision_forced": false,
+      "decision_estimate_action": 1.000000089893818,
+      "decision_estimate_deg": 2.000000164294901,
+      "chosen_dir": 1.0,
+      "true_dir_at_decision": 1.0,
+      "est_kept_rate": [
+       0.5967741935483871,
+       0.8709677419354839,
+       0.08064516129032258
+      ]
+     },
+     {
+      "seed": 1001,
+      "bias_deg": [
+       2.0,
+       2.0,
+       2.0
+      ],
+      "success": true,
+      "steps": 60,
+      "traj_mm": 48.371111147105694,
+      "return": -59.0,
+      "final_theta": "theta_neg",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ],
+       [
+        5,
+        "theta_pos"
+       ],
+       [
+        27,
+        "theta_neg"
+       ]
+      ],
+      "n_theta_changes": 2,
+      "true_dir": 1.0,
+      "final_true_dir": -1.0,
+      "final_theta_correct": true,
+      "switch_latency": 7,
+      "flipped_in_episode": true,
+      "sat_pos": [
+       0.35,
+       0.0,
+       0.0
+      ],
+      "sat_neg": [
+       0.0,
+       0.2,
+       0.9166666666666666
+      ],
+      "pre_sat_pos": [
+       0.8833333333333333,
+       0.13333333333333333,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.26666666666666666,
+       0.65
+      ],
+      "decision_step": 5,
+      "decision_forced": false,
+      "decision_estimate_action": 1.0000001000442045,
+      "decision_estimate_deg": 2.0000001845956743,
+      "chosen_dir": 1.0,
+      "true_dir_at_decision": 1.0,
+      "est_kept_rate": [
+       0.6166666666666667,
+       0.8,
+       0.08333333333333333
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

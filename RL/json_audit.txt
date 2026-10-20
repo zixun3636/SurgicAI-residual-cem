@@ -1,0 +1,103 @@
+
+================================================================================
+evolution_results/best_scale1_bias2deg.json
+base_insert_model_path: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+residual_scale: 1.0
+angle_bias_deg: 2.0
+
+================================================================================
+evolution_results/direction_conditioned_eval.json
+eval_seed: 4
+
+================================================================================
+evolution_results/direction_conditioned_seed_0.json
+eval_seed: 0
+
+================================================================================
+evolution_results/direction_conditioned_seed_1.json
+eval_seed: 1
+
+================================================================================
+evolution_results/direction_conditioned_seed_2.json
+eval_seed: 2
+
+================================================================================
+evolution_results/direction_conditioned_seed_3.json
+eval_seed: 3
+
+================================================================================
+evolution_results/direction_conditioned_seed_4.json
+eval_seed: 4
+
+================================================================================
+evolution_results/magnitude_neg25_cem.json
+model_path: /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip
+base_insert_model_path: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+residual_scale: 1.0
+generations: 5
+population: 8
+episodes_per_candidate: 20
+
+================================================================================
+evolution_results/magnitude_test.json
+model_path: /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip
+base_insert_model_path: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+residual_scale: 1.0
+generations: 1
+population: 4
+episodes_per_candidate: 5
+
+================================================================================
+evolution_results/multibias_rot_scale_bias.json
+base_insert_model_path: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+residual_scale: 1.0
+
+================================================================================
+evolution_results/negative_multibias_rot_scale_bias.json
+base_insert_model_path: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+residual_scale: 1.0
+
+================================================================================
+evolution_results/negative_multiseed_eval.json
+[summary]
+
+================================================================================
+evolution_results/residual_100ep_no_cem/bias_+2.00_summary.json
+residual_scale: 1.0
+eval_seed: 100
+angle_bias_deg: 2.0
+episodes: 100
+theta: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+
+================================================================================
+evolution_results/residual_100ep_with_cem/bias_+2.00_summary.json
+residual_scale: 1.0
+eval_seed: 100
+angle_bias_deg: 2.0
+episodes: 100
+theta: [0.9403843283653259, 0.979397714138031, 1.1095186471939087, -0.48590049147605896, -0.24643699824810028, -0.9295461177825928]
+
+================================================================================
+evolution_results/residual_trajectories/bias_+2.00_summary.json
+residual_scale: 1.0
+eval_seed: 100
+angle_bias_deg: 2.0
+episodes: 5
+theta: [0.9403843283653259, 0.979397714138031, 1.1095186471939087, -0.48590049147605896, -0.24643699824810028, -0.9295461177825928]
+
+================================================================================
+evolution_results/residual_trajectories_no_cem/bias_+2.00_summary.json
+residual_scale: 1.0
+eval_seed: 100
+angle_bias_deg: 2.0
+episodes: 5
+theta: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+
+================================================================================
+evolution_results/symmetric_multibias_rot_scale_bias.json
+base_insert_model_path: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+residual_scale: 1.0
+
+================================================================================
+evolution_results/unseen_bias_eval.json
+eval_seed: 100

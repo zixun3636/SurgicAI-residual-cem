@@ -1,0 +1,141 @@
+{
+  "method": "magnitude_conditioned_cem",
+  "condition": "theta is independently optimized for each angle bias",
+  "bias_values": [
+    -2.5
+  ],
+  "algorithm": "TD3_HER_BC",
+  "residual_scale": 1.0,
+  "model_path": "/home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip",
+  "base_insert_model_path": "/home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip",
+  "base_insert_algo": "TD3_HER_BC",
+  "postprocess_mode": "rot_scale_bias",
+  "generations": 1,
+  "population": 4,
+  "episodes_per_candidate": 5,
+  "results": {
+    "-2.5": {
+      "bias_deg": -2.5,
+      "best": {
+        "score": 287.76665261792624,
+        "success_rate": 0.4,
+        "mean_steps": 222.6,
+        "mean_traj_mm": 93.33473820737672,
+        "mean_return": -222.2,
+        "theta": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale_vec": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "bias_vec": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "history": [
+        {
+          "generation": 1,
+          "best_generation": {
+            "score": 287.76665261792624,
+            "success_rate": 0.4,
+            "mean_steps": 222.6,
+            "mean_traj_mm": 93.33473820737672,
+            "mean_return": -222.2,
+            "theta": [
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale_vec": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "bias_vec": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "best_overall": {
+            "score": 287.76665261792624,
+            "success_rate": 0.4,
+            "mean_steps": 222.6,
+            "mean_traj_mm": 93.33473820737672,
+            "mean_return": -222.2,
+            "theta": [
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale_vec": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "bias_vec": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "new_mean": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "new_std": [
+            0.029999999329447746,
+            0.029999999329447746,
+            0.029999999329447746,
+            0.029999999329447746,
+            0.029999999329447746,
+            0.029999999329447746
+          ]
+        }
+      ]
+    }
+  }
+}

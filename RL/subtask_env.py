@@ -24,6 +24,7 @@ class SRC_subtask(gym.Env):
 
         # Define action and observation space
         super(SRC_subtask, self).__init__()
+        self.enable_jaw_control = False  # Disable jaw joint control to avoid invalid joint index error
         self.random_range = np.array([0.003,0.02,np.pi/6],dtype=np.float32)
         self.max_timestep = max_episode_step
         print(f"max episode length is {self.max_timestep}")
@@ -73,7 +74,7 @@ class SRC_subtask(gym.Env):
         self.psm2 = PSM(self.simulation_manager, 'psm2',add_joint_errors=False)
         self.psm_list = [self.psm1, self.psm2]
         self.ecm = ECM(self.simulation_manager, 'CameraFrame')
-        self.ecm2 = ECM(self.simulation_manager, 'FreeCamera')
+        self.ecm2 = ECM(self.simulation_manager, 'CameraFrame')
         self.Camera_view_reset()
 
         self.needle = NeedleInitialization(self.simulation_manager) # needle obj
@@ -226,7 +227,8 @@ class SRC_subtask(gym.Env):
         Jaw_angle = obs[6]
         T_goal = Frame(Rotation.RPY(Roll,Pitch,Yaw),Vector(X,Y,Z))
         self.psm_list[psm_idx-1].servo_cp(T_goal)
-        self.psm_list[psm_idx-1].set_jaw_angle(Jaw_angle)  
+        if getattr(self, "enable_jaw_control", False):
+            self.psm_list[psm_idx-1].set_jaw_angle(Jaw_angle)  
 
 
     def psm_step_move(self,obs,psm_idx:int,execute_time=0.5):
@@ -243,7 +245,8 @@ class SRC_subtask(gym.Env):
         Jaw_angle = obs[6]
         T_goal = Frame(Rotation.RPY(Roll,Pitch,Yaw),Vector(X,Y,Z))
         self.psm_list[psm_idx-1].move_cp(T_goal,execute_time)
-        self.psm_list[psm_idx-1].set_jaw_angle(Jaw_angle)
+        if getattr(self, "enable_jaw_control", False):
+            self.psm_list[psm_idx-1].set_jaw_angle(Jaw_angle)
 
     def exit_goal_evaluator(self,deg=120,dev=[0,0,0],idx=2, exit_num = 1):
         

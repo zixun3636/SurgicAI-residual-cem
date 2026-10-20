@@ -1,0 +1,152 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/home/suzixun/.local/lib/python3.8/site-packages/gymnasium/envs/registration.py:485: UserWarning: [33mWARN: The environment creator metadata doesn't include `render_modes`, contains: ['render.modes', 'reward_type'][0m
+  logger.warn(
+max episode length is 300
+step size is [0.001      0.001      0.001      0.03490658 0.03490658 0.03490658
+ 0.05      ]
+Set random seed
+reward type is sparse
+Translation threshold: 0.5, angle threshold: 0.1745329201221466
+Found Common Object Namespace as:  /ambf/env/
+psm1_target_ik NAMED OBJECT NOT FOUND
+psm1_palm_joint_ik NAMED OBJECT NOT FOUND
+psm1_target_fk NAMED OBJECT NOT FOUND
+ERROR! Requested Joint Idx of "6" outside valid range [0 - -1]
+ERROR! Requested Joint Idx of "7" outside valid range [0 - -1]
+psm2_target_ik NAMED OBJECT NOT FOUND
+psm2_palm_joint_ik NAMED OBJECT NOT FOUND
+psm2_target_fk NAMED OBJECT NOT FOUND
+Initialized!!!
+Loading model: /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip
+Exists: True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Loading model: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+Exists: True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+========== Estimated-Direction CEM ==========
+theta_pos      : [ 0.9403843   0.97939765  1.1095186  -0.48590052 -0.24643701 -0.9295461 ]
+theta_neg      : [1.0204709  0.69582325 1.1939869  0.25085098 0.45563132 0.4710242 ]
+bias_mode      : scalar
+conditions     : ['-2', '2']
+methods        : ['oracle', 'estimated', 'residual_only', 'pos_only']
+warmup_steps   : 5   deadzone: 0.0   keep_updating: False
+est_noise_deg  : 0.0   action_noise_std: 0.0
+=============================================
+
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -2 |        oracle | success=100.00% | steps= 59.67
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -2 |     estimated | success=100.00% | steps= 61.67 | dir_acc=100.0% | decide@5.0 | d_hat=-1.9999997227293944
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+bias=      -2 | residual_only | success= 66.67% | steps=148.67
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+bias=      -2 |      pos_only | success=  0.00% | steps=300.00
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       2 |        oracle | success=100.00% | steps= 59.00
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       2 |     estimated | success=100.00% | steps= 64.00 | dir_acc=100.0% | decide@5.0 | d_hat=1.9999999772946648
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+bias=       2 | residual_only | success= 66.67% | steps=160.67
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       2 |      pos_only | success=100.00% | steps= 59.33
+/home/suzixun/SurgicAI/RL/RL_algo/DemoHerReplayBuffer.py:38: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  observations[key] = th.tensor(observations[key], dtype=th.float32, device=self.device)
+
+Elapsed: 2.5 min
+
+========== Summary (success %) ==========
+    bias |        oracle |     estimated | residual_only |      pos_only
+      -2 |         100.0 |         100.0 |          66.7 |           0.0
+       2 |         100.0 |         100.0 |          66.7 |         100.0
+
+Saved to: /home/suzixun/SurgicAI/RL/evolution_results/estimated_direction/smoke.json
+Exception in thread Thread-68:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "<string>", line 321, in _run_obj_publishers
+RuntimeError: dictionary changed size during iteration
+Closing publisher for:  /ambf/env/Plane
+Closing publisher for:  /ambf/env/lights/light2
+Closing publisher for:  /ambf/env/cameras/cameraL
+Closing publisher for:  /ambf/env/cameras/cameraR
+Closing publisher for:  /ambf/env/cameras/cameraL2
+Closing publisher for:  World
+Closing publisher for:  /ambf/env/psm1/baselink
+Closing publisher for:  /ambf/env/psm1/toolyawlink
+Closing publisher for:  /ambf/env/psm1/Sensor0
+Closing publisher for:  /ambf/env/psm1/Actuator0
+Closing publisher for:  /ambf/env/psm2/baselink
+Closing publisher for:  /ambf/env/psm2/toolyawlink
+Closing publisher for:  /ambf/env/psm2/Sensor0
+Closing publisher for:  /ambf/env/psm2/Actuator0
+Closing publisher for:  /ambf/env/BlackGround
+Closing publisher for:  /ambf/env/CameraFrame
+Closing publisher for:  /ambf/env/Ledge
+Closing publisher for:  /ambf/env/Needle
+Closing publisher for:  /ambf/env/Phantom
+Closing publisher for:  /ambf/env/Barrier
+Closing publisher for:  /ambf/env/Entry1
+Closing publisher for:  /ambf/env/Entry2
+Closing publisher for:  /ambf/env/Entry3
+Closing publisher for:  /ambf/env/Entry4
+Closing publisher for:  /ambf/env/Exit1
+Closing publisher for:  /ambf/env/Exit2
+Closing publisher for:  /ambf/env/Exit3
+Closing publisher for:  /ambf/env/Exit4
+Closing publisher for:  /ambf/env/psm/ghostEntry1
+Closing publisher for:  /ambf/env/psm/ghostExit1
+Closing publisher for:  /ambf/env/psm/ghostEntry2
+Closing publisher for:  /ambf/env/psm/ghostExit2
+Closing publisher for:  /ambf/env/psm/ghostEntry3
+Closing publisher for:  /ambf/env/psm/ghostExit3
+Closing publisher for:  /ambf/env/psm/ghostEntry4
+Closing publisher for:  /ambf/env/psm/ghostExit4

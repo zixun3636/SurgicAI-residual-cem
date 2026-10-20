@@ -1,0 +1,33 @@
+{
+  "angle_bias_deg": 2.0,
+  "episodes": 100,
+  "eval_seed": 100,
+  "theta": [
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "scale_vec": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0
+  ],
+  "bias_vec": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "residual_scale": 1.0,
+  "output_path": "/home/suzixun/SurgicAI/RL/evolution_results/residual_100ep_no_cem/bias_+2.00.npz"
+}

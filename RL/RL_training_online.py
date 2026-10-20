@@ -33,7 +33,7 @@ def create_model(args, env, expert_data):
 def setup_environment(args):
     max_episode_steps = 300
     trans_step = 1.0e-3
-    angle_step = np.deg2rad(3)
+    angle_step = np.deg2rad(2)
     jaw_step = 0.05
     step_size = np.array([trans_step, trans_step, trans_step, angle_step, angle_step, angle_step, jaw_step], dtype=np.float32)
 

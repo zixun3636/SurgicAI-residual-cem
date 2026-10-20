@@ -1,0 +1,1913 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/home/suzixun/.local/lib/python3.8/site-packages/gymnasium/envs/registration.py:485: UserWarning: [33mWARN: The environment creator metadata doesn't include `render_modes`, contains: ['render.modes', 'reward_type'][0m
+  logger.warn(
+max episode length is 300
+step size is [0.001      0.001      0.001      0.03490658 0.03490658 0.03490658
+ 0.05      ]
+Set random seed
+reward type is sparse
+Translation threshold: 0.5, angle threshold: 0.1745329201221466
+Found Common Object Namespace as:  /ambf/env/
+psm1_target_ik NAMED OBJECT NOT FOUND
+psm1_palm_joint_ik NAMED OBJECT NOT FOUND
+psm1_target_fk NAMED OBJECT NOT FOUND
+psm2_target_ik NAMED OBJECT NOT FOUND
+psm2_palm_joint_ik NAMED OBJECT NOT FOUND
+psm2_target_fk NAMED OBJECT NOT FOUND
+Initialized!!!
+Loading model (TD3_HER_BC): /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip  exists=True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Loading model (TD3_HER_BC): /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip  exists=True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+========== Estimated-Direction CEM v2 ==========
+residual       : TD3_HER_BC  scale=1.0
+bias_mode      : scalar   flip_step: 0
+conditions     : ['-2', '-1', '-0.5', '0.5', '1', '2']
+methods        : ['oracle', 'est_seq', 'est_seq_pitch']
+fixed warmup   : 20   seq z=3.0 min_n=10 max_wait=40   window=10
+est_noise_deg  : 0.0
+================================================
+
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -2 |        oracle | success=100.00% | steps= 59.96
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -2 |       est_seq | success=100.00% | steps= 61.98 | dir_acc=100.0% | decide@22.4 | d_hat=-1.686deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -2 | est_seq_pitch | success=100.00% | steps= 65.42 | dir_acc=100.0% | decide@28.5 | d_hat=-1.580deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -1 |        oracle | success=100.00% | steps= 59.06
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -1 |       est_seq | success=100.00% | steps= 58.80 | dir_acc=100.0% | decide@13.3 | d_hat=-1.000deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -1 | est_seq_pitch | success= 98.00% | steps= 63.90 | dir_acc=98.0% | decide@14.2 | d_hat=-0.964deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -0.5 |        oracle | success=100.00% | steps= 59.50
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -0.5 |       est_seq | success=100.00% | steps= 59.14 | dir_acc=100.0% | decide@13.3 | d_hat=-0.500deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -0.5 | est_seq_pitch | success=100.00% | steps= 59.22 | dir_acc=100.0% | decide@13.3 | d_hat=-0.500deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=     0.5 |        oracle | success=100.00% | steps= 57.98
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=     0.5 |       est_seq | success= 98.00% | steps= 63.32 | dir_acc=100.0% | decide@8.2 | d_hat=+0.506deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=     0.5 | est_seq_pitch | success=100.00% | steps= 58.90 | dir_acc=100.0% | decide@14.3 | d_hat=+0.500deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       1 |        oracle | success=100.00% | steps= 60.22
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       1 |       est_seq | success=100.00% | steps= 61.94 | dir_acc=100.0% | decide@6.8 | d_hat=+1.000deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       1 | est_seq_pitch | success=100.00% | steps= 62.70 | dir_acc=100.0% | decide@12.1 | d_hat=+1.000deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       2 |        oracle | success=100.00% | steps= 59.72
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       2 |       est_seq | success=100.00% | steps= 64.06 | dir_acc=100.0% | decide@9.1 | d_hat=+2.000deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       2 | est_seq_pitch | success=100.00% | steps= 67.78 | dir_acc=100.0% | decide@14.3 | d_hat=+2.000deg
+/home/suzixun/SurgicAI/RL/RL_algo/DemoHerReplayBuffer.py:38: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  observations[key] = th.tensor(observations[key], dtype=th.float32, device=self.device)
+
+Elapsed: 59.8 min
+
+========== Summary (success %) ==========
+    bias |        oracle |       est_seq | est_seq_pitch
+      -2 |         100.0 |         100.0 |         100.0
+      -1 |         100.0 |         100.0 |          98.0
+    -0.5 |         100.0 |         100.0 |         100.0
+     0.5 |         100.0 |          98.0 |         100.0
+       1 |         100.0 |         100.0 |         100.0
+       2 |         100.0 |         100.0 |         100.0
+
+Saved to: /home/suzixun/SurgicAI/RL/evolution_results/estimated_direction/v2/exp1_clean.json
+Exception in thread Thread-64:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "<string>", line 321, in _run_obj_publishers
+RuntimeError: dictionary changed size during iteration
+Closing publisher for:  /ambf/env/Plane
+Closing publisher for:  /ambf/env/lights/light2
+Closing publisher for:  /ambf/env/cameras/cameraL
+Closing publisher for:  /ambf/env/cameras/cameraR
+Closing publisher for:  /ambf/env/cameras/cameraL2
+Closing publisher for:  World
+Closing publisher for:  /ambf/env/psm1/baselink
+Closing publisher for:  /ambf/env/psm1/toolyawlink
+Closing publisher for:  /ambf/env/psm1/Sensor0
+Closing publisher for:  /ambf/env/psm1/Actuator0
+Closing publisher for:  /ambf/env/psm2/baselink
+Closing publisher for:  /ambf/env/psm2/toolyawlink
+Closing publisher for:  /ambf/env/psm2/Sensor0
+Closing publisher for:  /ambf/env/psm2/Actuator0
+Closing publisher for:  /ambf/env/BlackGround
+Closing publisher for:  /ambf/env/CameraFrame
+Closing publisher for:  /ambf/env/Ledge
+Closing publisher for:  /ambf/env/Needle
+Closing publisher for:  /ambf/env/Phantom
+Closing publisher for:  /ambf/env/Barrier
+Closing publisher for:  /ambf/env/Entry1
+Closing publisher for:  /ambf/env/Entry2
+Closing publisher for:  /ambf/env/Entry3
+Closing publisher for:  /ambf/env/Entry4
+Closing publisher for:  /ambf/env/Exit1
+Closing publisher for:  /ambf/env/Exit2
+Closing publisher for:  /ambf/env/Exit3
+Closing publisher for:  /ambf/env/Exit4
+Closing publisher for:  /ambf/env/psm/ghostEntry1
+Closing publisher for:  /ambf/env/psm/ghostExit1
+Closing publisher for:  /ambf/env/psm/ghostEntry2
+Closing publisher for:  /ambf/env/psm/ghostExit2
+Closing publisher for:  /ambf/env/psm/ghostEntry3
+Closing publisher for:  /ambf/env/psm/ghostExit3
+Closing publisher for:  /ambf/env/psm/ghostEntry4
+Closing publisher for:  /ambf/env/psm/ghostExit4

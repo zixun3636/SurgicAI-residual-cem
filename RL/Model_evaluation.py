@@ -10,12 +10,12 @@ import torch
 
 gc.collect()
 torch.cuda.empty_cache()
-Base_directory = "/home/jwu220/Trajectory_cloud/RL_new"
+Base_directory = "/home/suzixun/SurgicAI/RL"
 
 def setup_environment(args):
     max_episode_steps = 300
     trans_step = 1.0e-3
-    angle_step = np.deg2rad(3)
+    angle_step = np.deg2rad(2)
     jaw_step = 0.05
     step_size = np.array([trans_step, trans_step, trans_step, angle_step, angle_step, angle_step, jaw_step], dtype=np.float32)
 
@@ -60,7 +60,7 @@ def run_evaluation(env, model, num_episodes, max_episode_steps):
         for timestep in range(max_episode_steps):
             action, _ = model.predict(obs, deterministic=True)
             next_obs, reward, terminated, truncated, info = env.step(action)
-            trajectory_length += np.linalg.norm(action[0:3] * env.step_size[0:3] * 1000)
+            trajectory_length += np.linalg.norm(action[0:3] * env.unwrapped.step_size[0:3] * 1000)
             obs = next_obs
             if terminated:
                 total_success += 1
@@ -109,7 +109,7 @@ def main():
     
     env, step_size, threshold, max_episode_steps = setup_environment(args)
     
-    train_seeds = [1, 10, 100, 1000, 10000]
+    train_seeds = [0]
     all_success_rates = []
     all_lengths = []
     all_timecosts = []
@@ -117,7 +117,7 @@ def main():
     for train_seed in train_seeds:
         model = load_model(args.algorithm, env, args.task_name, args.reward_type, train_seed)
         
-        num_episodes = 20
+        num_episodes = 1
         success_rate, avg_length, avg_timecost, lengths, timecosts = run_evaluation(env, model, num_episodes, max_episode_steps)
         
         all_success_rates.append(success_rate)

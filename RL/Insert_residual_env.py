@@ -1,0 +1,228 @@
+"""
+Residual action environment for SurgicAI insert subtask.
+
+Put this file under the repository's `RL/` directory, next to `Insert_env.py`.
+It allows training a residual policy on top of a frozen pretrained insert policy:
+
+    a_final = pi_base(obs) + residual_scale * a_residual
+
+The existing training entry should be able to load this environment with:
+
+    --task_name insert_residual
+
+because RL_training_online.py constructs:
+    module: Insert_residual_env
+    class : SRC_insert_residual
+
+Required environment variable:
+    BASE_INSERT_MODEL_PATH=/path/to/pretrained/insert/model.zip
+
+Optional environment variables:
+    RESIDUAL_SCALE=0.1
+    BASE_INSERT_ALGO=TD3_BC   # TD3_BC, TD3, SAC, PPO
+    ENABLE_RESIDUAL_JAW=0     # keep 0 for current insert task
+"""
+
+import os
+import numpy as np
+
+from Insert_env import SRC_insert
+
+
+class SRC_insert_residual(SRC_insert):
+    """
+    Insert environment that trains only an action residual.
+
+    The RL agent interacting with this environment does NOT output the full insert
+    action. It outputs a residual action. Internally, this env loads a frozen base
+    insert policy and executes:
+
+        final_action = base_action + residual_scale * residual_action
+
+    The final action is clipped to the original action space before applying the
+    same robot-control logic used by SRC_insert.step().
+    """
+
+    def __init__(
+        self,
+        seed=None,
+        render_mode=None,
+        reward_type="sparse",
+        threshold=[0.5, np.deg2rad(30)],
+        max_episode_step=200,
+        step_size=None,
+        base_model_path=None,
+        residual_scale=None,
+        base_algorithm=None,
+        enable_residual_jaw=None,
+    ):
+        super(SRC_insert_residual, self).__init__(
+            seed=seed,
+            render_mode=render_mode,
+            reward_type=reward_type,
+            threshold=threshold,
+            max_episode_step=max_episode_step,
+            step_size=step_size,
+        )
+
+        self.base_model_path = base_model_path or os.environ.get("BASE_INSERT_MODEL_PATH")
+        if not self.base_model_path:
+            raise ValueError(
+                "SRC_insert_residual requires a frozen base insert model. "
+                "Set BASE_INSERT_MODEL_PATH=/path/to/base_insert_model.zip, "
+                "or pass base_model_path when constructing the env."
+            )
+
+        self.residual_scale = float(
+            residual_scale
+            if residual_scale is not None
+            else os.environ.get("RESIDUAL_SCALE", 0.1)
+        )
+        self.base_algorithm = (base_algorithm or os.environ.get("BASE_INSERT_ALGO", "TD3_BC")).upper()
+        self.enable_residual_jaw = self._parse_bool(
+            enable_residual_jaw
+            if enable_residual_jaw is not None
+            else os.environ.get("ENABLE_RESIDUAL_JAW", "0")
+        )
+
+        self.base_model = self._load_base_model(self.base_model_path, self.base_algorithm)
+        self._last_obs = None
+
+    @staticmethod
+    def _parse_bool(value):
+        if isinstance(value, bool):
+            return value
+        return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
+
+    def _load_base_model(self, model_path, algorithm_name):
+        """Load the frozen base policy used to produce pi_base(obs)."""
+        if algorithm_name in {"TD3_BC", "TD3_HER_BC"}:
+            try:
+                from RL_algo.td3_BC import TD3_BC
+            except ImportError:
+                # Fallback for running from a different working directory.
+                from td3_BC import TD3_BC
+            return TD3_BC.load(model_path, env=self)
+
+        if algorithm_name == "TD3":
+            from stable_baselines3 import TD3
+            return TD3.load(model_path, env=self)
+
+        if algorithm_name == "SAC":
+            from stable_baselines3 import SAC
+            return SAC.load(model_path, env=self)
+
+        if algorithm_name == "PPO":
+            from stable_baselines3 import PPO
+            return PPO.load(model_path, env=self)
+
+        raise ValueError(
+            f"Unsupported BASE_INSERT_ALGO={algorithm_name}. "
+            "Use TD3_BC, TD3_HER_BC, TD3, SAC, or PPO."
+        )
+
+
+    def residual_from_expert_action(self, expert_action, obs=None):
+        """
+        Convert a full expert action into the residual action target.
+
+        In the residual environment:
+            final_action = base_action + residual_scale * residual_action
+
+        Therefore, for BC training:
+            residual_action = (expert_action - base_action) / residual_scale
+        """
+        expert_action = np.asarray(expert_action, dtype=np.float32).copy()
+        expert_action = expert_action.reshape(self.action_space.shape)
+
+        if obs is None:
+            obs = self._last_obs
+
+        if obs is None:
+            raise RuntimeError("obs is required to convert expert action to residual action.")
+
+        base_action, _ = self.base_model.predict(obs, deterministic=True)
+        base_action = np.asarray(base_action, dtype=np.float32).copy()
+        base_action = base_action.reshape(self.action_space.shape)
+
+        scale = max(float(self.residual_scale), 1e-8)
+        residual_action = (expert_action - base_action) / scale
+
+        if not self.enable_residual_jaw:
+            residual_action[-1] = 0.0
+
+        residual_action = np.clip(
+            residual_action,
+            self.action_space.low,
+            self.action_space.high,
+        )
+
+        return residual_action.astype(np.float32)
+
+
+    def reset(self, seed=None, **kwargs):
+        obs, info = super().reset(seed=seed, **kwargs)
+        self._last_obs = obs
+        return obs, info
+
+    def step(self, residual_action):
+        """
+        Receive residual action from the trainable policy, combine it with the
+        frozen base policy action, and execute the final action in the simulator.
+        """
+        if self._last_obs is None:
+            raise RuntimeError("reset() must be called before step().")
+
+        residual_action = np.asarray(residual_action, dtype=np.float32).copy()
+        residual_action = residual_action.reshape(self.action_space.shape)
+
+        # Keep the original insert-task assumption: jaw/gripper is not learned.
+        # The parent Insert_env.step() also forced action[-1] = 0. Here we keep
+        # it explicit so the residual architecture is easy to inspect.
+        if not self.enable_residual_jaw:
+            residual_action[-1] = 0.0
+
+        base_action, _ = self.base_model.predict(self._last_obs, deterministic=True)
+        base_action = np.asarray(base_action, dtype=np.float32).copy()
+        base_action = base_action.reshape(self.action_space.shape)
+
+        final_action = base_action + self.residual_scale * residual_action
+        final_action = np.clip(final_action, self.action_space.low, self.action_space.high)
+        final_action = final_action.astype(np.float32)
+
+        if not self.enable_residual_jaw:
+            final_action[-1] = 0.0
+
+        obs, reward, terminated, truncated, info = self._execute_insert_action(final_action)
+
+        info = dict(info)
+        info["base_action"] = base_action
+        info["residual_action"] = residual_action
+        info["final_action"] = final_action
+        info["residual_scale"] = self.residual_scale
+
+        self._last_obs = obs
+        return obs, reward, terminated, truncated, info
+
+    def _execute_insert_action(self, action):
+        """
+        Same robot-control logic as SRC_insert.step(), except action has already
+        been converted from residual action to final action.
+        """
+        self.timestep += 1
+        self.action = action
+
+        current = self.psm_goal_list[self.psm_idx - 1]
+        action_step = action * self.step_size
+
+        self.psm_goal_list[self.psm_idx - 1] = np.clip(
+            current + action_step,
+            self.action_lims_low[0:7],
+            self.action_lims_high[0:7],
+        )
+
+        self.world_handle.update()
+        self.psm_step(self.psm_goal_list[self.psm_idx - 1], self.psm_idx)
+        self._update_observation(self.psm_goal_list[self.psm_idx - 1])
+
+        return self.obs, self.reward, self.terminate, self.truncate, self.info

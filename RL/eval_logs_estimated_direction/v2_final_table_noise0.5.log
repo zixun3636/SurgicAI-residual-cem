@@ -1,0 +1,2670 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/home/suzixun/.local/lib/python3.8/site-packages/gymnasium/envs/registration.py:485: UserWarning: [33mWARN: The environment creator metadata doesn't include `render_modes`, contains: ['render.modes', 'reward_type'][0m
+  logger.warn(
+max episode length is 300
+step size is [0.001      0.001      0.001      0.03490658 0.03490658 0.03490658
+ 0.05      ]
+Set random seed
+reward type is sparse
+Translation threshold: 0.5, angle threshold: 0.1745329201221466
+Found Common Object Namespace as:  /ambf/env/
+psm1_target_ik NAMED OBJECT NOT FOUND
+psm1_palm_joint_ik NAMED OBJECT NOT FOUND
+psm1_target_fk NAMED OBJECT NOT FOUND
+psm2_target_ik NAMED OBJECT NOT FOUND
+psm2_palm_joint_ik NAMED OBJECT NOT FOUND
+psm2_target_fk NAMED OBJECT NOT FOUND
+Initialized!!!
+Loading model (TD3_HER_BC): /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip  exists=True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Loading model (TD3_HER_BC): /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip  exists=True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+========== Estimated-Direction CEM v2 ==========
+residual       : TD3_HER_BC  scale=1.0
+bias_mode      : scalar   flip_step: 0
+conditions     : ['-2.5', '-2', '-1.5', '-1', '-0.5', '0', '0.5', '1', '1.5', '2', '2.5']
+methods        : ['oracle', 'adaptive']
+fixed warmup   : 20   seq z=3.0 min_n=10 max_wait=40   window=10
+est_noise_deg  : 0.5
+================================================
+
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -2.5 |        oracle | success= 83.00% | steps=104.83
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -2.5 |      adaptive | success= 82.00% | steps=107.92 | dir_acc=100.0% | decide@16.8 | d_hat=-1.850deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -2 |        oracle | success= 99.00% | steps= 62.21
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -2 |      adaptive | success= 99.00% | steps= 62.08 | dir_acc=100.0% | decide@15.5 | d_hat=-1.826deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -1.5 |        oracle | success=100.00% | steps= 59.27
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -1.5 |      adaptive | success= 99.00% | steps= 61.49 | dir_acc=100.0% | decide@15.0 | d_hat=-1.343deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -1 |        oracle | success=100.00% | steps= 59.43
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=      -1 |      adaptive | success=100.00% | steps= 58.27 | dir_acc=100.0% | decide@14.8 | d_hat=-0.946deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -0.5 |        oracle | success=100.00% | steps= 59.07
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=    -0.5 |      adaptive | success=100.00% | steps= 58.84 | dir_acc=100.0% | decide@22.6 | d_hat=-0.533deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Maximum step reaches
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       0 |        oracle | success= 98.00% | steps= 63.67
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=       0 |      adaptive | success=100.00% | steps= 59.20 | dir_acc=n/a | decide@38.6 | d_hat=+0.015deg
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+reset!!!
+Approach the target
+bias=     0.5 |        oracle | success=100.00% | steps= 59.54
+/home/suzixun/SurgicAI/RL/RL_algo/DemoHerReplayBuffer.py:38: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  observations[key] = th.tensor(observations[key], dtype=th.float32, device=self.device)
+Exception in thread Thread-5715:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/suzixun/ambf/surgical_robotics_challenge/scripts/surgical_robotics_challenge/psm_arm.py", line 221, in _execute_trajectory
+    val = trajectory_gen.get_interpolated_x(np.array(cur_time, dtype=np.float32))
+  File "/home/suzixun/ambf/surgical_robotics_challenge/scripts/surgical_robotics_challenge/utils/interpolation.py", line 89, in get_interpolated_x
+    raise Exception('Time {} should be between {} and {}'.format(t, self._t0, self._tf))
+Exception: Time -0.45656609535217285 should be between 0 and 0.5
+Exception in thread Thread-70:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "<string>", line 321, in _run_obj_publishers
+RuntimeError: dictionary changed size during iteration

@@ -1,0 +1,385 @@
+max episode length is 300
+step size is [0.001      0.001      0.001      0.03490658 0.03490658 0.03490658
+ 0.05      ]
+Set random seed
+reward type is sparse
+Translation threshold: 0.5, angle threshold: 0.1745329201221466
+Found Common Object Namespace as:  /ambf/env/
+psm1_target_ik NAMED OBJECT NOT FOUND
+psm1_palm_joint_ik NAMED OBJECT NOT FOUND
+psm1_target_fk NAMED OBJECT NOT FOUND
+ERROR! Requested Joint Idx of "6" outside valid range [0 - -1]
+ERROR! Requested Joint Idx of "7" outside valid range [0 - -1]
+psm2_target_ik NAMED OBJECT NOT FOUND
+psm2_palm_joint_ik NAMED OBJECT NOT FOUND
+psm2_target_fk NAMED OBJECT NOT FOUND
+ERROR! Requested Joint Idx of "6" outside valid range [0 - -1]
+ERROR! Requested Joint Idx of "7" outside valid range [0 - -1]
+Initialized!!!
+Loading model: /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip
+Exists: True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Loading model: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+Exists: True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+========== Loaded Evolved Params ==========
+params_path      : /home/suzixun/SurgicAI/RL/evolution_results/best_scale1_bias2deg.json
+postprocess_mode : rot_scale_bias
+theta            : [ 1.1003703   1.0668108   1.2382969  -0.64379555 -0.13136625 -0.06537265]
+==========================================
+
+reset!!!
+Approach the target
+Episode 001 | success=True | steps=62 | traj_mm=42.18 | return=-61.00
+reset!!!
+Approach the target
+Episode 002 | success=True | steps=60 | traj_mm=54.11 | return=-59.00
+reset!!!
+Approach the target
+Episode 003 | success=True | steps=60 | traj_mm=60.76 | return=-59.00
+reset!!!
+Maximum step reaches
+Episode 004 | success=False | steps=300 | traj_mm=133.37 | return=-300.00
+reset!!!
+Approach the target
+Episode 005 | success=True | steps=60 | traj_mm=36.93 | return=-59.00
+reset!!!
+Approach the target
+Episode 006 | success=True | steps=58 | traj_mm=34.35 | return=-57.00
+reset!!!
+Approach the target
+Episode 007 | success=True | steps=61 | traj_mm=47.77 | return=-60.00
+reset!!!
+Approach the target
+Episode 008 | success=True | steps=61 | traj_mm=62.47 | return=-60.00
+reset!!!
+Approach the target
+Episode 009 | success=True | steps=189 | traj_mm=98.01 | return=-188.00
+reset!!!
+Approach the target
+Episode 010 | success=True | steps=71 | traj_mm=52.40 | return=-70.00
+reset!!!
+Approach the target
+Episode 011 | success=True | steps=60 | traj_mm=60.10 | return=-59.00
+reset!!!
+Approach the target
+Episode 012 | success=True | steps=58 | traj_mm=45.68 | return=-57.00
+reset!!!
+Approach the target
+Episode 013 | success=True | steps=60 | traj_mm=57.00 | return=-59.00
+reset!!!
+Approach the target
+Episode 014 | success=True | steps=192 | traj_mm=96.65 | return=-191.00
+reset!!!
+Approach the target
+Episode 015 | success=True | steps=61 | traj_mm=51.41 | return=-60.00
+reset!!!
+Approach the target
+Episode 016 | success=True | steps=60 | traj_mm=58.92 | return=-59.00
+reset!!!
+Approach the target
+Episode 017 | success=True | steps=61 | traj_mm=34.79 | return=-60.00
+reset!!!
+Approach the target
+Episode 018 | success=True | steps=65 | traj_mm=44.47 | return=-64.00
+reset!!!
+Approach the target
+Episode 019 | success=True | steps=60 | traj_mm=54.57 | return=-59.00
+reset!!!
+Approach the target
+Episode 020 | success=True | steps=65 | traj_mm=51.81 | return=-64.00
+reset!!!
+Approach the target
+Episode 021 | success=True | steps=63 | traj_mm=64.06 | return=-62.00
+reset!!!
+Approach the target
+Episode 022 | success=True | steps=57 | traj_mm=40.18 | return=-56.00
+reset!!!
+Approach the target
+Episode 023 | success=True | steps=61 | traj_mm=64.21 | return=-60.00
+reset!!!
+Approach the target
+Episode 024 | success=True | steps=68 | traj_mm=54.74 | return=-67.00
+reset!!!
+Approach the target
+Episode 025 | success=True | steps=61 | traj_mm=64.16 | return=-60.00
+reset!!!
+Maximum step reaches
+Episode 026 | success=False | steps=300 | traj_mm=85.77 | return=-300.00
+reset!!!
+Approach the target
+Episode 027 | success=True | steps=57 | traj_mm=39.91 | return=-56.00
+reset!!!
+Approach the target
+Episode 028 | success=True | steps=191 | traj_mm=107.62 | return=-190.00
+reset!!!
+Approach the target
+Episode 029 | success=True | steps=64 | traj_mm=43.58 | return=-63.00
+reset!!!
+Approach the target
+Episode 030 | success=True | steps=59 | traj_mm=36.51 | return=-58.00
+reset!!!
+Approach the target
+Episode 031 | success=True | steps=62 | traj_mm=45.06 | return=-61.00
+reset!!!
+Approach the target
+Episode 032 | success=True | steps=62 | traj_mm=51.11 | return=-61.00
+reset!!!
+Approach the target
+Episode 033 | success=True | steps=62 | traj_mm=45.42 | return=-61.00
+reset!!!
+Approach the target
+Episode 034 | success=True | steps=61 | traj_mm=36.69 | return=-60.00
+reset!!!
+Approach the target
+Episode 035 | success=True | steps=73 | traj_mm=57.35 | return=-72.00
+reset!!!
+Approach the target
+Episode 036 | success=True | steps=58 | traj_mm=39.21 | return=-57.00
+reset!!!
+Approach the target
+Episode 037 | success=True | steps=56 | traj_mm=41.82 | return=-55.00
+reset!!!
+Approach the target
+Episode 038 | success=True | steps=193 | traj_mm=106.00 | return=-192.00
+reset!!!
+Approach the target
+Episode 039 | success=True | steps=61 | traj_mm=63.05 | return=-60.00
+reset!!!
+Approach the target
+Episode 040 | success=True | steps=62 | traj_mm=59.70 | return=-61.00
+reset!!!
+Approach the target
+Episode 041 | success=True | steps=62 | traj_mm=41.58 | return=-61.00
+reset!!!
+Approach the target
+Episode 042 | success=True | steps=65 | traj_mm=56.41 | return=-64.00
+reset!!!
+Approach the target
+Episode 043 | success=True | steps=59 | traj_mm=51.54 | return=-58.00
+reset!!!
+Approach the target
+Episode 044 | success=True | steps=59 | traj_mm=39.81 | return=-58.00
+reset!!!
+Approach the target
+Episode 045 | success=True | steps=61 | traj_mm=53.36 | return=-60.00
+reset!!!
+Approach the target
+Episode 046 | success=True | steps=55 | traj_mm=44.15 | return=-54.00
+reset!!!
+Approach the target
+Episode 047 | success=True | steps=60 | traj_mm=56.95 | return=-59.00
+reset!!!
+Approach the target
+Episode 048 | success=True | steps=60 | traj_mm=57.89 | return=-59.00
+reset!!!
+Approach the target
+Episode 049 | success=True | steps=60 | traj_mm=37.91 | return=-59.00
+reset!!!
+Approach the target
+Episode 050 | success=True | steps=62 | traj_mm=52.79 | return=-61.00
+reset!!!
+Approach the target
+Episode 051 | success=True | steps=61 | traj_mm=46.26 | return=-60.00
+reset!!!
+Approach the target
+Episode 052 | success=True | steps=61 | traj_mm=37.56 | return=-60.00
+reset!!!
+Approach the target
+Episode 053 | success=True | steps=61 | traj_mm=63.99 | return=-60.00
+reset!!!
+Approach the target
+Episode 054 | success=True | steps=61 | traj_mm=57.75 | return=-60.00
+reset!!!
+Approach the target
+Episode 055 | success=True | steps=60 | traj_mm=59.53 | return=-59.00
+reset!!!
+Approach the target
+Episode 056 | success=True | steps=61 | traj_mm=50.19 | return=-60.00
+reset!!!
+Approach the target
+Episode 057 | success=True | steps=60 | traj_mm=52.63 | return=-59.00
+reset!!!
+Approach the target
+Episode 058 | success=True | steps=60 | traj_mm=52.73 | return=-59.00
+reset!!!
+Approach the target
+Episode 059 | success=True | steps=58 | traj_mm=55.75 | return=-57.00
+reset!!!
+Approach the target
+Episode 060 | success=True | steps=58 | traj_mm=33.69 | return=-57.00
+reset!!!
+Approach the target
+Episode 061 | success=True | steps=60 | traj_mm=42.63 | return=-59.00
+reset!!!
+Approach the target
+Episode 062 | success=True | steps=60 | traj_mm=33.15 | return=-59.00
+reset!!!
+Approach the target
+Episode 063 | success=True | steps=61 | traj_mm=63.25 | return=-60.00
+reset!!!
+Approach the target
+Episode 064 | success=True | steps=67 | traj_mm=50.10 | return=-66.00
+reset!!!
+Approach the target
+Episode 065 | success=True | steps=60 | traj_mm=41.16 | return=-59.00
+reset!!!
+Approach the target
+Episode 066 | success=True | steps=60 | traj_mm=56.82 | return=-59.00
+reset!!!
+Approach the target
+Episode 067 | success=True | steps=61 | traj_mm=54.69 | return=-60.00
+reset!!!
+Approach the target
+Episode 068 | success=True | steps=59 | traj_mm=36.06 | return=-58.00
+reset!!!
+Approach the target
+Episode 069 | success=True | steps=59 | traj_mm=52.28 | return=-58.00
+reset!!!
+Approach the target
+Episode 070 | success=True | steps=61 | traj_mm=54.79 | return=-60.00
+reset!!!
+Approach the target
+Episode 071 | success=True | steps=58 | traj_mm=34.11 | return=-57.00
+reset!!!
+Approach the target
+Episode 072 | success=True | steps=60 | traj_mm=49.85 | return=-59.00
+reset!!!
+Approach the target
+Episode 073 | success=True | steps=238 | traj_mm=77.57 | return=-237.00
+reset!!!
+Approach the target
+Episode 074 | success=True | steps=61 | traj_mm=63.91 | return=-60.00
+reset!!!
+Approach the target
+Episode 075 | success=True | steps=61 | traj_mm=51.20 | return=-60.00
+reset!!!
+Approach the target
+Episode 076 | success=True | steps=63 | traj_mm=48.13 | return=-62.00
+reset!!!
+Approach the target
+Episode 077 | success=True | steps=61 | traj_mm=37.09 | return=-60.00
+reset!!!
+Approach the target
+Episode 078 | success=True | steps=61 | traj_mm=59.66 | return=-60.00
+reset!!!
+Approach the target
+Episode 079 | success=True | steps=197 | traj_mm=109.66 | return=-196.00
+reset!!!
+Approach the target
+Episode 080 | success=True | steps=57 | traj_mm=35.54 | return=-56.00
+reset!!!
+Approach the target
+Episode 081 | success=True | steps=196 | traj_mm=106.22 | return=-195.00
+reset!!!
+Approach the target
+Episode 082 | success=True | steps=207 | traj_mm=100.61 | return=-206.00
+reset!!!
+Approach the target
+Episode 083 | success=True | steps=195 | traj_mm=108.77 | return=-194.00
+reset!!!
+Approach the target
+Episode 084 | success=True | steps=62 | traj_mm=47.55 | return=-61.00
+reset!!!
+Approach the target
+Episode 085 | success=True | steps=72 | traj_mm=55.51 | return=-71.00
+reset!!!
+Approach the target
+Episode 086 | success=True | steps=62 | traj_mm=51.46 | return=-61.00
+reset!!!
+Approach the target
+Episode 087 | success=True | steps=61 | traj_mm=63.13 | return=-60.00
+reset!!!
+Approach the target
+Episode 088 | success=True | steps=60 | traj_mm=53.76 | return=-59.00
+reset!!!
+Approach the target
+Episode 089 | success=True | steps=61 | traj_mm=43.86 | return=-60.00
+reset!!!
+Approach the target
+Episode 090 | success=True | steps=60 | traj_mm=48.11 | return=-59.00
+reset!!!
+Approach the target
+Episode 091 | success=True | steps=60 | traj_mm=57.08 | return=-59.00
+reset!!!
+Approach the target
+Episode 092 | success=True | steps=59 | traj_mm=36.23 | return=-58.00
+reset!!!
+Approach the target
+Episode 093 | success=True | steps=61 | traj_mm=47.01 | return=-60.00
+reset!!!
+Approach the target
+Episode 094 | success=True | steps=61 | traj_mm=60.03 | return=-60.00
+reset!!!
+Approach the target
+Episode 095 | success=True | steps=62 | traj_mm=57.13 | return=-61.00
+reset!!!
+Approach the target
+Episode 096 | success=True | steps=226 | traj_mm=97.11 | return=-225.00
+reset!!!
+Approach the target
+Episode 097 | success=True | steps=60 | traj_mm=54.32 | return=-59.00
+reset!!!
+Approach the target
+Episode 098 | success=True | steps=62 | traj_mm=60.38 | return=-61.00
+reset!!!
+Approach the target
+Episode 099 | success=True | steps=63 | traj_mm=45.88 | return=-62.00
+reset!!!
+Approach the target
+Episode 100 | success=True | steps=62 | traj_mm=52.81 | return=-61.00
+
+========== Evolved Evaluation Result ==========
+Angle bias deg       : 0.5
+Action noise std     : 0.0
+Episodes             : 100
+Success Rate         : 98.00%
+Mean Steps           : 79.96
+Mean Trajectory      : 56.25 mm
+Mean Return          : -78.98
+Theta                : [ 1.10037029  1.06681085  1.23829687 -0.64379555 -0.13136625 -0.06537265]
+Scale vec            : [1.         1.         1.         1.10037029 1.06681085 1.23829687
+ 0.        ]
+Bias vec             : [ 0.          0.          0.         -0.64379555 -0.13136625 -0.06537265
+  0.        ]
+==============================================
+
+Closing publisher for:  /ambf/env/Plane
+Closing publisher for:  /ambf/env/lights/light2
+Closing publisher for:  /ambf/env/cameras/cameraL
+Closing publisher for:  /ambf/env/cameras/cameraR
+Closing publisher for:  /ambf/env/cameras/cameraL2
+Closing publisher for:  World
+Closing publisher for:  /ambf/env/psm1/baselink
+Closing publisher for:  /ambf/env/psm1/toolyawlink
+Closing publisher for:  /ambf/env/psm1/Sensor0
+Closing publisher for:  /ambf/env/psm1/Actuator0
+Closing publisher for:  /ambf/env/psm2/baselink
+Closing publisher for:  /ambf/env/psm2/toolyawlink
+Closing publisher for:  /ambf/env/psm2/Sensor0
+Closing publisher for:  /ambf/env/psm2/Actuator0
+Closing publisher for:  /ambf/env/BlackGround
+Closing publisher for:  /ambf/env/CameraFrame
+Closing publisher for:  /ambf/env/Ledge
+Closing publisher for:  /ambf/env/Needle
+Closing publisher for:  /ambf/env/Phantom
+Closing publisher for:  /ambf/env/Barrier
+Closing publisher for:  /ambf/env/Entry1
+Closing publisher for:  /ambf/env/Entry2
+Closing publisher for:  /ambf/env/Entry3
+Closing publisher for:  /ambf/env/Entry4
+Closing publisher for:  /ambf/env/Exit1
+Closing publisher for:  /ambf/env/Exit2
+Closing publisher for:  /ambf/env/Exit3
+Closing publisher for:  /ambf/env/Exit4
+Closing publisher for:  /ambf/env/psm/ghostEntry1
+Closing publisher for:  /ambf/env/psm/ghostExit1
+Closing publisher for:  /ambf/env/psm/ghostEntry2
+Closing publisher for:  /ambf/env/psm/ghostExit2
+Closing publisher for:  /ambf/env/psm/ghostEntry3
+Closing publisher for:  /ambf/env/psm/ghostExit3
+Closing publisher for:  /ambf/env/psm/ghostEntry4
+Closing publisher for:  /ambf/env/psm/ghostExit4

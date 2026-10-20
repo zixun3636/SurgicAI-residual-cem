@@ -1,0 +1,184 @@
+{
+ "method": "estimated_direction_cem_v2",
+ "config": {
+  "algorithm": "BC",
+  "task_name": "Insert",
+  "reward_type": "sparse",
+  "trans_error": 0.5,
+  "angle_error": 10.0,
+  "eval_seed": 0,
+  "episodes": 2,
+  "bias_mode": "scalar",
+  "bias_list": "0",
+  "random3d_low": -2.0,
+  "random3d_high": 2.0,
+  "flip_step": 0,
+  "methods": "residual_only",
+  "warmup_steps": 20,
+  "z_thresh": 3.0,
+  "min_samples": 10,
+  "max_wait": 40,
+  "se_floor": 0.001,
+  "window": 10,
+  "adaptive_axes": "0,1,2",
+  "sat_margin": 0.98,
+  "est_noise_deg": 0.0,
+  "action_noise_std": 0.0,
+  "model_path": "/home/suzixun/SurgicAI/RL/insert_residual/BC/sparse/seed_999/final_model.zip",
+  "base_insert_model_path": "/home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip",
+  "base_insert_algo": "TD3_HER_BC",
+  "residual_scale": 1.0,
+  "postprocess_mode": "rot_scale_bias",
+  "positive_params_path": "/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json",
+  "negative_params_path": "/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json",
+  "scale_min": 0.0,
+  "scale_max": 2.0,
+  "bias_bound": 1.0,
+  "save_json": "/home/suzixun/SurgicAI/RL/evolution_results/estimated_direction/v2_smoke_bc.json",
+  "save_episodes": 1,
+  "angle_bias_deg": 0.0
+ },
+ "theta_pos": [
+  0.9403843283653259,
+  0.9793976545333862,
+  1.1095186471939087,
+  -0.48590052127838135,
+  -0.24643701314926147,
+  -0.9295461177825928
+ ],
+ "theta_neg": [
+  1.0204708576202393,
+  0.6958232522010803,
+  1.1939868927001953,
+  0.25085097551345825,
+  0.4556313157081604,
+  0.47102418541908264
+ ],
+ "results": {
+  "0": {
+   "residual_only": {
+    "summary": {
+     "episodes": 2,
+     "success_rate": 0.0,
+     "mean_steps": 300.0,
+     "mean_traj_mm": 64.98542215815542,
+     "mean_return": -300.0,
+     "sat_pos": [
+      0.14166666666666666,
+      0.015,
+      0.0
+     ],
+     "sat_neg": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "pre_sat_pos": [
+      0.14166666666666666,
+      0.015,
+      0.0
+     ],
+     "pre_sat_neg": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "final_theta_accuracy": null,
+     "mean_theta_changes": 0.0
+    },
+    "episodes": [
+     {
+      "seed": 0,
+      "bias_deg": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "success": false,
+      "steps": 300,
+      "traj_mm": 64.67540047026705,
+      "return": -300.0,
+      "final_theta": "neutral",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ]
+      ],
+      "n_theta_changes": 0,
+      "true_dir": 0.0,
+      "final_true_dir": 0.0,
+      "final_theta_correct": null,
+      "switch_latency": null,
+      "flipped_in_episode": false,
+      "sat_pos": [
+       0.14,
+       0.013333333333333334,
+       0.0
+      ],
+      "sat_neg": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "pre_sat_pos": [
+       0.14,
+       0.013333333333333334,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "seed": 1,
+      "bias_deg": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "success": false,
+      "steps": 300,
+      "traj_mm": 65.29544384604378,
+      "return": -300.0,
+      "final_theta": "neutral",
+      "theta_changes": [
+       [
+        0,
+        "neutral"
+       ]
+      ],
+      "n_theta_changes": 0,
+      "true_dir": 0.0,
+      "final_true_dir": 0.0,
+      "final_theta_correct": null,
+      "switch_latency": null,
+      "flipped_in_episode": false,
+      "sat_pos": [
+       0.14333333333333334,
+       0.016666666666666666,
+       0.0
+      ],
+      "sat_neg": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "pre_sat_pos": [
+       0.14333333333333334,
+       0.016666666666666666,
+       0.0
+      ],
+      "pre_sat_neg": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

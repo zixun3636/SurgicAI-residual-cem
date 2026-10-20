@@ -1,0 +1,375 @@
+max episode length is 300
+step size is [0.001      0.001      0.001      0.03490658 0.03490658 0.03490658
+ 0.05      ]
+Set random seed
+reward type is sparse
+Translation threshold: 0.5, angle threshold: 0.1745329201221466
+Found Common Object Namespace as:  /ambf/env/
+psm1_target_ik NAMED OBJECT NOT FOUND
+psm1_palm_joint_ik NAMED OBJECT NOT FOUND
+psm1_target_fk NAMED OBJECT NOT FOUND
+psm2_target_ik NAMED OBJECT NOT FOUND
+psm2_palm_joint_ik NAMED OBJECT NOT FOUND
+psm2_target_fk NAMED OBJECT NOT FOUND
+Initialized!!!
+Loading model: /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+Exists: True
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+=== Robustness Eval Config ===
+Eval mode: base
+Task name: Insert
+Algorithm: TD3_HER_BC
+Action noise std: 0.0
+Angle bias deg: 0.5
+Bias in action space: 0.2500000019365917
+Residual scale: 0.1
+Episodes: 100
+==============================
+
+reset!!!
+Approach the target
+Episode 001 | success=True | steps=89 | traj_mm=28.98
+reset!!!
+Approach the target
+Episode 002 | success=True | steps=79 | traj_mm=69.10
+reset!!!
+Approach the target
+Episode 003 | success=True | steps=80 | traj_mm=85.03
+reset!!!
+Approach the target
+Episode 004 | success=True | steps=99 | traj_mm=32.90
+reset!!!
+Approach the target
+Episode 005 | success=True | steps=80 | traj_mm=28.76
+reset!!!
+Approach the target
+Episode 006 | success=True | steps=89 | traj_mm=28.25
+reset!!!
+Approach the target
+Episode 007 | success=True | steps=83 | traj_mm=84.51
+reset!!!
+Approach the target
+Episode 008 | success=True | steps=80 | traj_mm=99.56
+reset!!!
+Maximum step reaches
+Episode 009 | success=False | steps=300 | traj_mm=31.62
+reset!!!
+Approach the target
+Episode 010 | success=True | steps=80 | traj_mm=70.22
+reset!!!
+Approach the target
+Episode 011 | success=True | steps=79 | traj_mm=87.45
+reset!!!
+Approach the target
+Episode 012 | success=True | steps=90 | traj_mm=30.02
+reset!!!
+Approach the target
+Episode 013 | success=True | steps=80 | traj_mm=97.30
+reset!!!
+Maximum step reaches
+Episode 014 | success=False | steps=300 | traj_mm=31.95
+reset!!!
+Approach the target
+Episode 015 | success=True | steps=81 | traj_mm=93.23
+reset!!!
+Approach the target
+Episode 016 | success=True | steps=80 | traj_mm=97.75
+reset!!!
+Approach the target
+Episode 017 | success=True | steps=90 | traj_mm=29.57
+reset!!!
+Approach the target
+Episode 018 | success=True | steps=87 | traj_mm=28.09
+reset!!!
+Approach the target
+Episode 019 | success=True | steps=79 | traj_mm=79.12
+reset!!!
+Approach the target
+Episode 020 | success=True | steps=79 | traj_mm=66.87
+reset!!!
+Approach the target
+Episode 021 | success=True | steps=80 | traj_mm=66.11
+reset!!!
+Approach the target
+Episode 022 | success=True | steps=89 | traj_mm=29.20
+reset!!!
+Approach the target
+Episode 023 | success=True | steps=80 | traj_mm=100.18
+reset!!!
+Approach the target
+Episode 024 | success=True | steps=89 | traj_mm=28.62
+reset!!!
+Approach the target
+Episode 025 | success=True | steps=81 | traj_mm=94.03
+reset!!!
+Maximum step reaches
+Episode 026 | success=False | steps=300 | traj_mm=26.97
+reset!!!
+Approach the target
+Episode 027 | success=True | steps=115 | traj_mm=31.36
+reset!!!
+Maximum step reaches
+Episode 028 | success=False | steps=300 | traj_mm=28.54
+reset!!!
+Approach the target
+Episode 029 | success=True | steps=88 | traj_mm=28.83
+reset!!!
+Approach the target
+Episode 030 | success=True | steps=88 | traj_mm=29.21
+reset!!!
+Approach the target
+Episode 031 | success=True | steps=89 | traj_mm=28.31
+reset!!!
+Approach the target
+Episode 032 | success=True | steps=82 | traj_mm=86.70
+reset!!!
+Approach the target
+Episode 033 | success=True | steps=81 | traj_mm=28.80
+reset!!!
+Maximum step reaches
+Episode 034 | success=False | steps=300 | traj_mm=35.92
+reset!!!
+Approach the target
+Episode 035 | success=True | steps=83 | traj_mm=32.33
+reset!!!
+Approach the target
+Episode 036 | success=True | steps=89 | traj_mm=28.53
+reset!!!
+Approach the target
+Episode 037 | success=True | steps=91 | traj_mm=30.61
+reset!!!
+Maximum step reaches
+Episode 038 | success=False | steps=300 | traj_mm=32.52
+reset!!!
+Approach the target
+Episode 039 | success=True | steps=80 | traj_mm=97.75
+reset!!!
+Approach the target
+Episode 040 | success=True | steps=81 | traj_mm=101.20
+reset!!!
+Maximum step reaches
+Episode 041 | success=False | steps=300 | traj_mm=33.63
+reset!!!
+Approach the target
+Episode 042 | success=True | steps=78 | traj_mm=71.37
+reset!!!
+Approach the target
+Episode 043 | success=True | steps=80 | traj_mm=75.18
+reset!!!
+Approach the target
+Episode 044 | success=True | steps=89 | traj_mm=28.69
+reset!!!
+Approach the target
+Episode 045 | success=True | steps=81 | traj_mm=88.27
+reset!!!
+Approach the target
+Episode 046 | success=True | steps=120 | traj_mm=24.85
+reset!!!
+Approach the target
+Episode 047 | success=True | steps=79 | traj_mm=81.46
+reset!!!
+Approach the target
+Episode 048 | success=True | steps=80 | traj_mm=74.14
+reset!!!
+Approach the target
+Episode 049 | success=True | steps=89 | traj_mm=30.32
+reset!!!
+Approach the target
+Episode 050 | success=True | steps=82 | traj_mm=86.31
+reset!!!
+Approach the target
+Episode 051 | success=True | steps=88 | traj_mm=28.56
+reset!!!
+Approach the target
+Episode 052 | success=True | steps=90 | traj_mm=30.30
+reset!!!
+Approach the target
+Episode 053 | success=True | steps=80 | traj_mm=98.65
+reset!!!
+Approach the target
+Episode 054 | success=True | steps=79 | traj_mm=71.78
+reset!!!
+Approach the target
+Episode 055 | success=True | steps=80 | traj_mm=78.78
+reset!!!
+Approach the target
+Episode 056 | success=True | steps=81 | traj_mm=87.12
+reset!!!
+Approach the target
+Episode 057 | success=True | steps=80 | traj_mm=72.76
+reset!!!
+Approach the target
+Episode 058 | success=True | steps=80 | traj_mm=75.18
+reset!!!
+Approach the target
+Episode 059 | success=True | steps=91 | traj_mm=31.91
+reset!!!
+Approach the target
+Episode 060 | success=True | steps=80 | traj_mm=25.41
+reset!!!
+Approach the target
+Episode 061 | success=True | steps=87 | traj_mm=28.54
+reset!!!
+Approach the target
+Episode 062 | success=True | steps=82 | traj_mm=28.81
+reset!!!
+Approach the target
+Episode 063 | success=True | steps=81 | traj_mm=100.01
+reset!!!
+Approach the target
+Episode 064 | success=True | steps=80 | traj_mm=67.31
+reset!!!
+Approach the target
+Episode 065 | success=True | steps=89 | traj_mm=28.58
+reset!!!
+Approach the target
+Episode 066 | success=True | steps=80 | traj_mm=77.82
+reset!!!
+Approach the target
+Episode 067 | success=True | steps=80 | traj_mm=93.68
+reset!!!
+Approach the target
+Episode 068 | success=True | steps=95 | traj_mm=32.45
+reset!!!
+Approach the target
+Episode 069 | success=True | steps=79 | traj_mm=84.03
+reset!!!
+Approach the target
+Episode 070 | success=True | steps=81 | traj_mm=82.05
+reset!!!
+Approach the target
+Episode 071 | success=True | steps=88 | traj_mm=30.93
+reset!!!
+Approach the target
+Episode 072 | success=True | steps=81 | traj_mm=81.84
+reset!!!
+Maximum step reaches
+Episode 073 | success=False | steps=300 | traj_mm=32.84
+reset!!!
+Approach the target
+Episode 074 | success=True | steps=80 | traj_mm=99.66
+reset!!!
+Approach the target
+Episode 075 | success=True | steps=81 | traj_mm=83.17
+reset!!!
+Approach the target
+Episode 076 | success=True | steps=88 | traj_mm=28.72
+reset!!!
+Approach the target
+Episode 077 | success=True | steps=89 | traj_mm=29.85
+reset!!!
+Approach the target
+Episode 078 | success=True | steps=80 | traj_mm=98.96
+reset!!!
+Maximum step reaches
+Episode 079 | success=False | steps=300 | traj_mm=29.29
+reset!!!
+Approach the target
+Episode 080 | success=True | steps=88 | traj_mm=28.81
+reset!!!
+Maximum step reaches
+Episode 081 | success=False | steps=300 | traj_mm=32.86
+reset!!!
+Approach the target
+Episode 082 | success=True | steps=89 | traj_mm=29.47
+reset!!!
+Maximum step reaches
+Episode 083 | success=False | steps=300 | traj_mm=30.09
+reset!!!
+Approach the target
+Episode 084 | success=True | steps=82 | traj_mm=84.95
+reset!!!
+Approach the target
+Episode 085 | success=True | steps=79 | traj_mm=78.96
+reset!!!
+Approach the target
+Episode 086 | success=True | steps=79 | traj_mm=86.65
+reset!!!
+Approach the target
+Episode 087 | success=True | steps=80 | traj_mm=98.32
+reset!!!
+Approach the target
+Episode 088 | success=True | steps=80 | traj_mm=70.00
+reset!!!
+Approach the target
+Episode 089 | success=True | steps=81 | traj_mm=89.27
+reset!!!
+Approach the target
+Episode 090 | success=True | steps=81 | traj_mm=28.16
+reset!!!
+Approach the target
+Episode 091 | success=True | steps=79 | traj_mm=77.19
+reset!!!
+Approach the target
+Episode 092 | success=True | steps=88 | traj_mm=29.27
+reset!!!
+Approach the target
+Episode 093 | success=True | steps=82 | traj_mm=28.04
+reset!!!
+Approach the target
+Episode 094 | success=True | steps=80 | traj_mm=79.11
+reset!!!
+Approach the target
+Episode 095 | success=True | steps=80 | traj_mm=99.75
+reset!!!
+Maximum step reaches
+Episode 096 | success=False | steps=300 | traj_mm=33.61
+reset!!!
+Approach the target
+Episode 097 | success=True | steps=80 | traj_mm=75.63
+reset!!!
+Approach the target
+Episode 098 | success=True | steps=80 | traj_mm=99.32
+reset!!!
+Approach the target
+Episode 099 | success=True | steps=82 | traj_mm=87.92
+reset!!!
+Approach the target
+Episode 100 | success=True | steps=82 | traj_mm=91.23
+
+=== Robustness Result ===
+Eval mode: base
+Action noise std: 0.0
+Angle bias deg: 0.5
+Episodes: 100
+Success Rate: 88.00%
+Average Trajectory Length: 62.25 mm
+Average Time Cost: 83.98 steps
+Closing publisher for:  /ambf/env/Plane
+Closing publisher for:  /ambf/env/lights/light2
+Closing publisher for:  /ambf/env/cameras/cameraL
+Closing publisher for:  /ambf/env/cameras/cameraR
+Closing publisher for:  /ambf/env/cameras/cameraL2
+Closing publisher for:  World
+Closing publisher for:  /ambf/env/psm1/baselink
+Closing publisher for:  /ambf/env/psm1/toolyawlink
+Closing publisher for:  /ambf/env/psm1/Sensor0
+Closing publisher for:  /ambf/env/psm1/Actuator0
+Closing publisher for:  /ambf/env/psm2/baselink
+Closing publisher for:  /ambf/env/psm2/toolyawlink
+Closing publisher for:  /ambf/env/psm2/Sensor0
+Closing publisher for:  /ambf/env/psm2/Actuator0
+Closing publisher for:  /ambf/env/BlackGround
+Closing publisher for:  /ambf/env/CameraFrame
+Closing publisher for:  /ambf/env/Ledge
+Closing publisher for:  /ambf/env/Needle
+Closing publisher for:  /ambf/env/Phantom
+Closing publisher for:  /ambf/env/Barrier
+Closing publisher for:  /ambf/env/Entry1
+Closing publisher for:  /ambf/env/Entry2
+Closing publisher for:  /ambf/env/Entry3
+Closing publisher for:  /ambf/env/Entry4
+Closing publisher for:  /ambf/env/Exit1
+Closing publisher for:  /ambf/env/Exit2
+Closing publisher for:  /ambf/env/Exit3
+Closing publisher for:  /ambf/env/Exit4
+Closing publisher for:  /ambf/env/psm/ghostEntry1
+Closing publisher for:  /ambf/env/psm/ghostExit1
+Closing publisher for:  /ambf/env/psm/ghostEntry2
+Closing publisher for:  /ambf/env/psm/ghostExit2
+Closing publisher for:  /ambf/env/psm/ghostEntry3
+Closing publisher for:  /ambf/env/psm/ghostExit3
+Closing publisher for:  /ambf/env/psm/ghostEntry4
+Closing publisher for:  /ambf/env/psm/ghostExit4

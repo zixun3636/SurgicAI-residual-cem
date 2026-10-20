@@ -1,0 +1,7 @@
+
+# ---- 本專題：排除訓練中途的 checkpoints（約 4.5GB）----
+**/checkpoints/*
+!RL/insert_residual/BC/sparse/seed_0/checkpoints/bc_25000_steps.zip
+RL/insert_residual/BC/sparse/seed_999/
+__pycache__/
+*.pyc

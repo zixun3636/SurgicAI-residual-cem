@@ -1,0 +1,86 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/home/suzixun/.local/lib/python3.8/site-packages/gymnasium/envs/registration.py:485: UserWarning: [33mWARN: The environment creator metadata doesn't include `render_modes`, contains: ['render.modes', 'reward_type'][0m
+  logger.warn(
+max episode length is 300
+step size is [0.001      0.001      0.001      0.03490658 0.03490658 0.03490658
+ 0.05      ]
+Set random seed
+reward type is sparse
+Translation threshold: 0.5, angle threshold: 0.1745329201221466
+Found Common Object Namespace as:  /ambf/env/
+psm1_target_ik NAMED OBJECT NOT FOUND
+psm1_palm_joint_ik NAMED OBJECT NOT FOUND
+psm1_target_fk NAMED OBJECT NOT FOUND
+psm2_target_ik NAMED OBJECT NOT FOUND
+psm2_palm_joint_ik NAMED OBJECT NOT FOUND
+psm2_target_fk NAMED OBJECT NOT FOUND
+Initialized!!!
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Loaded expert data from /home/suzixun/SurgicAI/RL/Expert_traj/Insert/all_episodes_merged.pkl
+Converted 5083 expert transitions from full actions to residual actions.
+Residual-target transitions: 5083
+Fraction of residual targets clipped at +-1 per axis [x y z roll pitch yaw]: [0.599 0.552 0.552 0.61  0.575 0.856]
+step 0 | val_mse=0.62383
+step   10000 | train_mse=0.38938 | val_mse=0.39882 | 158s
+step   20000 | train_mse=0.34778 | val_mse=0.39764 | 335s
+step   30000 | train_mse=0.30984 | val_mse=0.41375 | 505s
+step   40000 | train_mse=0.27488 | val_mse=0.41056 | 676s
+step   50000 | train_mse=0.24640 | val_mse=0.42761 | 851s
+step   60000 | train_mse=0.22279 | val_mse=0.45101 | 1028s
+step   70000 | train_mse=0.20535 | val_mse=0.46321 | 1195s
+step   80000 | train_mse=0.18976 | val_mse=0.48449 | 1368s
+step   90000 | train_mse=0.17692 | val_mse=0.50199 | 1540s
+step  100000 | train_mse=0.16585 | val_mse=0.51609 | 1717s
+/home/suzixun/SurgicAI/RL/RL_algo/DemoHerReplayBuffer.py:38: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  observations[key] = th.tensor(observations[key], dtype=th.float32, device=self.device)
+
+Saved: /home/suzixun/SurgicAI/RL/insert_residual/BC/sparse/seed_0/final_model.zip
+Loss log: /home/suzixun/SurgicAI/RL/insert_residual/BC/sparse/seed_0/bc_loss.csv
+Exception in thread Thread-72:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "<string>", line 321, in _run_obj_publishers
+RuntimeError: dictionary changed size during iteration
+Closing publisher for:  /ambf/env/Plane
+Closing publisher for:  /ambf/env/lights/light2
+Closing publisher for:  /ambf/env/cameras/cameraL
+Closing publisher for:  /ambf/env/cameras/cameraR
+Closing publisher for:  /ambf/env/cameras/cameraL2
+Closing publisher for:  World
+Closing publisher for:  /ambf/env/psm1/baselink
+Closing publisher for:  /ambf/env/psm1/toolyawlink
+Closing publisher for:  /ambf/env/psm1/Sensor0
+Closing publisher for:  /ambf/env/psm1/Actuator0
+Closing publisher for:  /ambf/env/psm2/baselink
+Closing publisher for:  /ambf/env/psm2/toolyawlink
+Closing publisher for:  /ambf/env/psm2/Sensor0
+Closing publisher for:  /ambf/env/psm2/Actuator0
+Closing publisher for:  /ambf/env/BlackGround
+Closing publisher for:  /ambf/env/CameraFrame
+Closing publisher for:  /ambf/env/Ledge
+Closing publisher for:  /ambf/env/Needle
+Closing publisher for:  /ambf/env/Phantom
+Closing publisher for:  /ambf/env/Barrier
+Closing publisher for:  /ambf/env/Entry1
+Closing publisher for:  /ambf/env/Entry2
+Closing publisher for:  /ambf/env/Entry3
+Closing publisher for:  /ambf/env/Entry4
+Closing publisher for:  /ambf/env/Exit1
+Closing publisher for:  /ambf/env/Exit2
+Closing publisher for:  /ambf/env/Exit3
+Closing publisher for:  /ambf/env/Exit4
+Closing publisher for:  /ambf/env/psm/ghostEntry1
+Closing publisher for:  /ambf/env/psm/ghostExit1
+Closing publisher for:  /ambf/env/psm/ghostEntry2
+Closing publisher for:  /ambf/env/psm/ghostExit2
+Closing publisher for:  /ambf/env/psm/ghostEntry3
+Closing publisher for:  /ambf/env/psm/ghostExit3
+Closing publisher for:  /ambf/env/psm/ghostEntry4
+Closing publisher for:  /ambf/env/psm/ghostExit4

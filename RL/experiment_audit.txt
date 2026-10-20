@@ -1,0 +1,293 @@
+========== TRAINING / EVAL HISTORY ==========
+        "method": "direction_conditioned_cem",
+POS_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json"
+NEG_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json"
+python3 eval_direction_conditioned_cem.py   --postprocess_mode rot_scale_bias   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 100   --bias_list=-2,-1.5,-1,-0.5,0.5,1,1.5,2   --action_noise_std 0.0   --model_path "$RES_MODEL"   --base_insert_model_path "$BASE_MODEL"   --base_insert_algo TD3_HER_BC   --residual_scale 1.0   --positive_params_path "$POS_CEM_PARAM"   --negative_params_path "$NEG_CEM_PARAM"
+nano run_direction_conditioned_multiseed.sh
+cat run_direction_conditioned_multiseed.sh
+chmod +x run_direction_conditioned_multiseed.sh
+./run_direction_conditioned_multiseed.sh
+grep -H "Mean Success Rate\|Min Success Rate\|Mean Steps\|Mean Trajectory" eval_logs_direction_conditioned/*.log
+nano run_direction_conditioned_noise.sh
+chmod +x run_direction_conditioned_noise.sh
+./run_direction_conditioned_noise.sh
+POS_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json"
+NEG_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json"
+python3 eval_direction_conditioned_cem.py   --postprocess_mode rot_scale_bias   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 100   --bias_list=-2.5,-1.75,-1.25,-0.75,0.75,1.25,1.75,2.5   --action_noise_std 0.0   --model_path "$RES_MODEL"   --base_insert_model_path "$BASE_MODEL"   --base_insert_algo TD3_HER_BC   --residual_scale 1.0   --positive_params_path "$POS_CEM_PARAM"   --negative_params_path "$NEG_CEM_PARAM"   --save_json /home/suzixun/SurgicAI/RL/evolution_results/unseen_bias_eval.json
+POS_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json"
+NEG_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json"
+python3 eval_direction_conditioned_cem.py   --postprocess_mode rot_scale_bias   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 100   --bias_list=-2.5,-1.75,-1.25,-0.75,0.75,1.25,1.75,2.5   --action_noise_std 0.0   --model_path "$RES_MODEL"   --base_insert_model_path "$BASE_MODEL"   --base_insert_algo TD3_HER_BC   --residual_scale 1.0   --positive_params_path "$POS_CEM_PARAM"   --negative_params_path "$NEG_CEM_PARAM"   --save_json /home/suzixun/SurgicAI/RL/evolution_results/unseen_bias_eval.json
+POS_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json"
+NEG_CEM_PARAM="/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json"
+for seed in 0 1 2 3 4; do     echo "====================================";     echo "Testing unseen bias = -2.5 deg";     echo "eval_seed = $seed";     echo "===================================="     python3 eval_direction_conditioned_cem.py       --postprocess_mode rot_scale_bias       --algorithm TD3_HER_BC       --task_name Insert       --reward_type sparse       --trans_error 0.5       --angle_error 10       --eval_seed $seed       --episodes 100       --bias_list=-2.5       --action_noise_std 0.0       --model_path "$RES_MODEL"       --base_insert_model_path "$BASE_MODEL"       --base_insert_algo TD3_HER_BC       --residual_scale 1.0       --positive_params_path "$POS_CEM_PARAM"       --negative_params_path "$NEG_CEM_PARAM" done
+for seed in 0 1 2 3 4; do     echo "";     echo "======================================";     echo "        SEED = $seed";     echo "        BIAS = -2.5 DEG";     echo "======================================"     python3 eval_direction_conditioned_cem.py       --postprocess_mode rot_scale_bias       --algorithm TD3_HER_BC       --task_name Insert       --reward_type sparse       --trans_error 0.5       --angle_error 10       --eval_seed $seed       --episodes 100       --bias_list=-2.5       --action_noise_std 0.0       --model_path "/home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip"       --base_insert_model_path "/home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip"       --base_insert_algo TD3_HER_BC       --residual_scale 1.0       --positive_params_path "/home/suzixun/SurgicAI/RL/evolution_results/multibias_rot_scale_bias.json"       --negative_params_path "/home/suzixun/SurgicAI/RL/evolution_results/negative_multibias_rot_scale_bias.json" done
+find . -maxdepth 2 -type f \( -name "*direction*cem*.py" -o -name "*cem*.py" \) | sort
+cp eval_direction_conditioned_cem.py eval_magnitude_conditioned_cem.py
+ls -l eval_direction_conditioned_cem.py eval_magnitude_conditioned_cem.py
+cat eval_direction_conditioned_cem.py
+cat evolve_residual_postprocess.py
+cp evolve_residual_postprocess.py evolve_magnitude_conditioned_cem.py
+src = Path("evolve_residual_postprocess.py")
+dst = Path("evolve_magnitude_conditioned_cem.py")
+print("注意：這只是安全副本，目前尚未改成 magnitude-conditioned。")
+cat > evolve_magnitude_conditioned_cem.py <<'PY'
+from evolve_residual_postprocess import load_model, rollout_score
+            "magnitude_conditioned_cem.json"
+        "method": "magnitude_conditioned_cem",
+ls -lh evolve_magnitude_conditioned_cem.py
+python3 evolve_magnitude_conditioned_cem.py   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --bias_list=-2.5   --eval_seed 0   --evo_seed 0   --episodes_per_candidate 5   --generations 1   --population 4   --residual_scale 1.0   --postprocess_mode rot_scale_bias   --model_path /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip   --base_insert_model_path /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip   --base_insert_algo TD3_HER_BC   --output_json /home/suzixun/SurgicAI/RL/evolution_results/magnitude_test.json
+python3 evolve_magnitude_conditioned_cem.py   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --bias_list=-2.5   --eval_seed 0   --evo_seed 0   --episodes_per_candidate 20   --generations 5   --population 8   --elite_frac 0.25   --action_noise_std 0.0   --residual_scale 1.0   --postprocess_mode rot_scale_bias   --model_path /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip   --base_insert_model_path /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip   --base_insert_algo TD3_HER_BC   --output_json /home/suzixun/SurgicAI/RL/evolution_results/magnitude_neg25_cem.json
+sed -n '1,260p' evolve_residual_postprocess.py
+sed -n '1,260p' robustness_eval_residual.py
+cat > analyze_residual_trajectory.py <<'PY'
+from evolve_residual_postprocess import (
+cat > analyze_residual_trajectory.py <<'PY'
+from evolve_residual_postprocess import (
+ls -lh analyze_residual_trajectory.py
+python3 -m py_compile analyze_residual_trajectory.py
+python3 analyze_residual_trajectory.py   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 5   --angle_bias_deg 2.0   --residual_scale 1.0   --model_path /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_0/final_model.zip   --base_insert_model_path /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip   --postprocess_mode rot_scale_bias   --theta "0.9403843,0.9793977,1.1095186,-0.4859005,-0.2464370,-0.9295461"
+p = Path("analyze_residual_trajectory.py")
+python3 -m py_compile analyze_residual_trajectory.py
+p = Path("analyze_residual_trajectory.py")
+python3 -m py_compile analyze_residual_trajectory.py
+python3 analyze_residual_trajectory.py   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 5   --angle_bias_deg 2.0   --residual_scale 1.0   --model_path /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_0/final_model.zip   --base_insert_model_path /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip   --postprocess_mode rot_scale_bias   --theta "0.9403843,0.9793977,1.1095186,-0.4859005,-0.2464370,-0.9295461"
+python3 analyze_residual_trajectory.py   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 5   --angle_bias_deg 2.0   --residual_scale 1.0   --model_path /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_0/final_model.zip   --base_insert_model_path /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip   --postprocess_mode rot_scale_bias   --theta "1,1,1,0,0,0"   --save_dir /home/suzixun/SurgicAI/RL/evolution_results/residual_trajectories_no_cem
+python3 analyze_residual_trajectory.py   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 100   --angle_bias_deg 2.0   --residual_scale 1.0   --model_path /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_0/final_model.zip   --base_insert_model_path /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip   --postprocess_mode rot_scale_bias   --theta "1,1,1,0,0,0"   --save_dir /home/suzixun/SurgicAI/RL/evolution_results/residual_100ep_no_cem
+python3 analyze_residual_trajectory.py   --algorithm TD3_HER_BC   --task_name Insert   --reward_type sparse   --trans_error 0.5   --angle_error 10   --eval_seed 100   --episodes 100   --angle_bias_deg 2.0   --residual_scale 1.0   --model_path /home/suzixun/SurgicAI/RL/insert_residual/TD3_HER_BC/sparse/seed_0/final_model.zip   --base_insert_model_path /home/suzixun/SurgicAI/RL/Insert/TD3_HER_BC/sparse/seed_0/final_model.zip   --postprocess_mode rot_scale_bias   --theta "0.9403843,0.9793977,1.1095186,-0.4859005,-0.2464370,-0.9295461"   --save_dir /home/suzixun/SurgicAI/RL/evolution_results/residual_100ep_with_cem
+from evolve_residual_postprocess import load_model, rollout_score
+
+========== ENV VARIABLES ==========
+
+========== RESULT JSON FILES ==========
+evolution_results/best_scale1_bias2deg.json
+evolution_results/direction_conditioned_eval.json
+evolution_results/direction_conditioned_seed_0.json
+evolution_results/direction_conditioned_seed_1.json
+evolution_results/direction_conditioned_seed_2.json
+evolution_results/direction_conditioned_seed_3.json
+evolution_results/direction_conditioned_seed_4.json
+evolution_results/magnitude_neg25_cem.json
+evolution_results/magnitude_test.json
+evolution_results/multibias_rot_scale_bias.json
+evolution_results/negative_multibias_rot_scale_bias.json
+evolution_results/negative_multiseed_eval.json
+evolution_results/residual_100ep_no_cem/bias_+2.00_summary.json
+evolution_results/residual_100ep_with_cem/bias_+2.00_summary.json
+evolution_results/residual_trajectories/bias_+2.00_summary.json
+evolution_results/residual_trajectories_no_cem/bias_+2.00_summary.json
+evolution_results/symmetric_multibias_rot_scale_bias.json
+evolution_results/unseen_bias_eval.json
+
+========== MODEL FILES ==========
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_100000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_10000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_110000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_120000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_130000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_140000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_150000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_160000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_170000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_180000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_190000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_200000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_20000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_210000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_220000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_230000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_240000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_250000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_260000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_270000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_280000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_290000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_300000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_30000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_310000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_320000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_330000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_340000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_350000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_360000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_370000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_380000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_390000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_400000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_40000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_410000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_420000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_430000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_440000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_450000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_460000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_470000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_480000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_490000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_500000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_50000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_60000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_70000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_80000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_90000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/final_model.zip
+Insert/TD3_HER_BC/sparse/seed_0/final_model_backup.zip
+Insert/TD3_HER_BC/sparse/seed_0/rl_model_1000000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_0/rl_model_900000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_100000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_10000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_110000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_120000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_130000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_140000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_150000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_160000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_170000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_180000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_190000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_200000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_20000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_210000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_220000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_230000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_240000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_250000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_260000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_270000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_280000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_290000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_300000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_30000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_40000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_50000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_60000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_70000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_80000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/checkpoints/rl_model_90000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_1/final_model.zip
+Insert/TD3_HER_BC/sparse/seed_3/checkpoints/rl_model_10000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_3/checkpoints/rl_model_20000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_3/checkpoints/rl_model_30000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_3/checkpoints/rl_model_40000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_3/checkpoints/rl_model_50000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_3/checkpoints/rl_model_60000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_10000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_20000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_30000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_40000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_50000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_60000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_70000_steps.zip
+Insert/TD3_HER_BC/sparse/seed_5/checkpoints/rl_model_80000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_100000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_10000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_110000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_120000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_130000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_140000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_150000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_160000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_170000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_180000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_190000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_200000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_20000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_210000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_220000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_230000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_240000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_250000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_260000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_270000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_280000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_290000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_300000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_30000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_310000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_320000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_330000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_340000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_350000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_360000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_370000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_380000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_390000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_400000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_40000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_410000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_420000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_430000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_440000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_450000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_460000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_470000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_480000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_490000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_500000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_50000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_60000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_70000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_80000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/checkpoints/rl_model_90000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_0/final_model.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_100000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_10000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_110000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_120000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_130000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_140000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_150000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_160000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_170000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_180000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_190000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_200000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_20000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_210000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_220000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_230000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_240000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_250000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_260000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_270000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_280000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_290000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_300000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_30000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_40000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_50000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_60000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_70000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_80000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/checkpoints/rl_model_90000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_100/final_model.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_100000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_10000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_110000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_120000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_130000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_140000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_150000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_160000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_170000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_180000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_190000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_200000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_20000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_210000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_220000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_230000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_240000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_250000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_260000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_270000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_280000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_290000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_300000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_30000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_40000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_50000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_60000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_70000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_80000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/checkpoints/rl_model_90000_steps.zip
+insert_residual/TD3_HER_BC/sparse/seed_75/final_model.zip
