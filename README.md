@@ -1,3 +1,36 @@
+# 演化學習對於手術機器人插針子任務之優化
+
+國立清華大學資訊工程學系 115 學年度大學部專題｜國科會 115 年度大專學生研究計畫
+專題學生：蘇梓勛、梁皓翔
+
+本專案在 [SurgicAI](https://github.com/surgical-robotics-ai/SurgicAI) 的插針（Insert）子任務上，研究如何讓既有策略在命令偏差下仍能完成插針。我們凍結 TD3-HER-BC 基礎策略，訓練殘差策略提供修正，再以交叉熵方法（CEM）搜尋殘差輸出的縮放與偏移參數，並由命令與位姿回饋在線估計偏差方向，依估計結果切換校正參數。
+
+> 本 repository 由 SurgicAI 原始程式碼修改而來，原專案說明保留於本頁下方。
+
+## 本專題新增的主要程式（皆位於 `RL/`）
+
+| 內容 | 檔案 |
+|---|---|
+| 殘差策略環境與訓練 | `Insert_residual_env.py`、`RL_training_online_residual.py` |
+| CEM 校準殘差輸出（單一偏差／多偏差） | `evolve_residual_postprocess.py`、`evolve_residual_postprocess_multibias.py` |
+| 依已知方向選擇校正參數的評估 | `eval_direction_conditioned_cem.py` |
+| 在線偏差方向估計（指令篩選、序列判斷、持續更新） | `eval_estimated_direction_cem.py`、`eval_estimated_direction_v2.py` |
+| 偏差下的穩健性評估 | `robustness_angle_bias_eval.py`、`robustness_eval_residual.py`、`eval_mixed_bias.py` |
+| BC-only 對照 | `train_residual_bc_only.py` |
+| 繪圖與分析 | `plot_estimated_direction.py`、`analyze_residual_trajectory.py` |
+| CEM 搜尋結果 | `evolution_results/` |
+| 實驗執行腳本 | `run_est_dir_*.sh`、`run_v2_*.sh`、`run_direction_conditioned_*.sh` |
+
+方向估計的方法、對照組與執行順序詳見 [`RL/EXPERIMENT_estimated_direction.md`](RL/EXPERIMENT_estimated_direction.md)。
+
+## 環境
+
+WSL Ubuntu 20.04、ROS Noetic、AMBF，其餘依賴與 SurgicAI 相同，安裝方式見下方原專案說明。AMBF 一次只能執行一個模擬，實驗腳本請依序執行。
+
+---
+
+*以下為 SurgicAI 原專案說明。*
+
 # A Fine-grained Platform for Data Collection and Benchmarking in Surgical Policy Learning
 
 ## Prerequiste
